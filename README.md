@@ -8,6 +8,6 @@
 - 🐘 I <3 PHP
 - 📫 Reach me on Twitter
 
-👇 My (apparently) prefered langages: 👇
+👇 My (apparently) prefered languages: 👇
 
 [![Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=matthieuwerner&show_icons=true&theme=radical&layout=compact)](https://github.com/anuraghazra/github-readme-stats)
