@@ -6,6 +6,7 @@
 - 🌱 I'm probably currently learning how can I automate useless stuff 🙈
 - 🇫🇷 I'm french
 - 🐘 I <3 PHP
+- 📢 Speaker & former
 - 📫 Reach me on Twitter
 
 👇 My (apparently) prefered languages: 👇
