@@ -1,7 +1,7 @@
 👋 Hi
 
 - 👨‍💼 I'm Matthieu
-- 🏢 I'm Working [@jolicode](http://github.com/jolicode)
+- 🏢 I'm Working [@Tiime](https://www.tiime.fr/)
 - 👀 I'm interested in approximately everything
 - 🌱 I'm probably currently learning how can I automate useless stuff 🙈
 - 🇫🇷 I'm french
