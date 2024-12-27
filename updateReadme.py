@@ -73,23 +73,23 @@ def main():
     repo_name = "matthieuwerner/matthieuwerner"
     commits = get_commit_count(repo_name)
 
-    # Lecture du fichier README
+    # Lecture du fichier README.md.dist
     try:
-        with open("README.md", "r") as file:
+        with open("README.md.dist", "r") as file:
             content = file.read()
-        print("README.md loaded successfully.")
+        print("README.md.dist loaded successfully.")
     except FileNotFoundError:
-        print("README.md not found. Please ensure the file exists.")
+        print("README.md.dist not found. Please ensure the file exists.")
         return
 
     # Génération du contenu encadré
     framed_content = generate_ascii_frame(content, season, commits)
 
-    # Écriture dans le README
+    # Écriture dans le fichier README.md
     try:
         with open("README.md", "w") as file:
             file.write(framed_content)
-        print("README.md updated successfully.")
+        print("README.md generated successfully.")
     except Exception as e:
         print(f"Erreur lors de l'écriture dans le fichier README.md : {e}")
 
