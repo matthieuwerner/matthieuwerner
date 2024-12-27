@@ -56,7 +56,7 @@ def generate_table(content, season, commits):
     selected_artwork = random.choice(artworks)
 
     # Dimensions de la grille
-    grid_height = 50  # Nombre de lignes
+    grid_height = 10  # Nombre de lignes
     grid_width = 10   # Nombre de colonnes
     total_cells = grid_height * grid_width
 
