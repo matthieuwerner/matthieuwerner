@@ -49,20 +49,27 @@ def fetch_random_met_artwork():
         raise Exception("Erreur lors de la récupération des œuvres du Met")
     object_ids = response.json().get("objectIDs", [])
 
-    # Sélectionner un ID au hasard
-    random_id = random.choice(object_ids)
+    # Filtrer jusqu'à obtenir une œuvre avec une image
+    for _ in range(10):  # Limite à 10 essais pour éviter les boucles infinies
+        random_id = random.choice(object_ids)
+        response = requests.get(f"{api_base_url}/objects/{random_id}")
+        if response.status_code != 200:
+            continue
+        artwork = response.json()
+        if artwork.get("primaryImage"):  # Vérifier si une image est disponible
+            return {
+                "title": artwork.get("title", "Œuvre inconnue"),
+                "image": artwork.get("primaryImage"),
+                "artist": artwork.get("artistDisplayName", "Artiste inconnu"),
+                "year": artwork.get("objectDate", "Date inconnue")
+            }
 
-    # Récupérer les détails de l'œuvre
-    response = requests.get(f"{api_base_url}/objects/{random_id}")
-    if response.status_code != 200:
-        raise Exception("Erreur lors de la récupération des détails de l'œuvre")
-    artwork = response.json()
-
+    # Si aucune œuvre avec image n'est trouvée, retourner une œuvre par défaut
     return {
-        "title": artwork.get("title", "Œuvre inconnue"),
-        "image": artwork.get("primaryImage", ""),
-        "artist": artwork.get("artistDisplayName", "Artiste inconnu"),
-        "year": artwork.get("objectDate", "Date inconnue")
+        "title": "Œuvre inconnue",
+        "image": "https://upload.wikimedia.org/wikipedia/commons/a/ac/No_image_available.svg",
+        "artist": "Artiste inconnu",
+        "year": "Date inconnue"
     }
 
 def generate_table(content, season, commits):
