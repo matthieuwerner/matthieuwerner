@@ -1,3 +1,6 @@
+```
+╔══════════════════════════════════════════════════════════════════════╗
+║  ║
 # 👨‍💻 Matthieu Werner
 
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-Matthieu%20Werner-blue?style=for-the-badge&logo=linkedin)](https://www.linkedin.com/in/matthieu-werner-2427a5281/) [![Blog](https://img.shields.io/badge/Blog-Matthieu's%20Articles-brightgreen?style=for-the-badge&logo=hashnode)](https://blog.matthieu-werner.fr)
@@ -130,3 +133,7 @@ class Matt {
 [PHP]: https://img.shields.io/badge/PHP-777BB4?logo=php&logoColor=fff&style=for-the-badge
 [PHP-url]: https://php.net
 
+
+║  ║
+╚══════════════════════════════════════════════════════════════════════╝
+```
