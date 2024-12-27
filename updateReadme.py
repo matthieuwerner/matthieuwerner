@@ -1,3 +1,4 @@
+
 import datetime
 import os
 from github import Github
@@ -26,7 +27,7 @@ def get_season():
 def get_commit_count(repo_name, days=30):
     try:
         print(f"Fetching commits for repository: {repo_name}")
-        repo = g.get_repo(repo_name)  # Nom complet du repo ex: "utilisateur/nom_du_repo"
+        repo = g.get_repo(repo_name)
         since = datetime.datetime.now() - datetime.timedelta(days=days)
         commits = repo.get_commits(since=since)
         print(f"Number of commits in the last {days} days: {commits.totalCount}")
@@ -49,10 +50,18 @@ def generate_ascii_frame(content, season, commits):
     # Générer le cadre
     frame_top = f"╔{'═' * 70}╗"
     frame_bottom = f"╚{'═' * 70}╝"
-    theme_line = f"║ {theme * density} ║"
+    theme_line = f"║ {theme * density:<69} ║"  # Alignement gauche pour éviter les débordements
 
     # Ajouter le cadre autour du contenu
-    framed_content = f"```\n{frame_top}\n{theme_line}\n{content}\n{theme_line}\n{frame_bottom}\n```"
+    framed_content = f"""
+```
+{frame_top}
+{theme_line}
+║ {content.replace('\n', ' '):<69} ║
+{theme_line}
+{frame_bottom}
+```
+"""
     return framed_content
 
 # Script principal
@@ -61,7 +70,7 @@ def main():
     season = get_season()
     print(f"Current season: {season}")
 
-    repo_name = "matthieuwerner/matthieuwerner"  # Remplacez par votre dépôt
+    repo_name = "matthieuwerner/matthieuwerner"
     commits = get_commit_count(repo_name)
 
     # Lecture du fichier README
