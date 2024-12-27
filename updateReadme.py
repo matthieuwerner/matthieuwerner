@@ -1,6 +1,6 @@
-
 import datetime
 import os
+import random
 from github import Github
 
 # Récupération du token GitHub
@@ -36,32 +36,45 @@ def get_commit_count(repo_name, days=30):
         print(f"Erreur lors de la récupération des commits : {e}")
         return 0
 
-# Générer le cadre ASCII en Markdown
-def generate_ascii_frame(content, season, commits):
+def generate_table(content, season, commits):
     themes = {
-        "spring": "🌸 🌳",
-        "summer": "🌞 🌴",
-        "autumn": "🍂 🍁",
-        "winter": "❄️ 🌲"
+        "spring": "🌸",
+        "summer": "🌞",
+        "autumn": "🍂",
+        "winter": "❄️"
     }
+    artworks = [
+        "🎨 Mona Lisa",
+        "🖼️ Starry Night",
+        "🎭 The Scream",
+        "🗿 Easter Island Moai",
+        "🖌️ The Persistence of Memory"
+    ]
+    # Sélection aléatoire d'une œuvre d'art
+    selected_artwork = random.choice(artworks)
+
+    # Générer les éléments saisonniers
     theme = themes[season]
     density = min(commits // 5, 10)  # Ajuste la densité en fonction des commits
+    seasonal_elements = theme * density
+    neutral_elements = "⬜" * (10 - density)
 
-    # Générer le cadre
-    frame_top = f"╔{'═' * 70}╗"
-    frame_bottom = f"╚{'═' * 70}╝"
-    theme_line = f"║ {theme * density:<68} ║"  # Alignement gauche pour éviter les débordements
-
-    # Ajouter le cadre autour du contenu
-    framed_content = (
-        f"{frame_top}\n"
-        f"{theme_line}\n"
-        f"{content}\n"
-        f"{theme_line}\n"
-        f"{frame_bottom}"
-    )
-    return framed_content
-
+    # Générer le tableau HTML
+    table_html = f"""
+<table>
+  <tr>
+    <th>Saison : {season.capitalize()}</th>
+    <th>Œuvre d'art</th>
+  </tr>
+  <tr>
+    <td>{seasonal_elements}{neutral_elements}</td>
+    <td>{selected_artwork}</td>
+  </tr>
+</table>
+"""
+    # Ajouter le contenu principal en dessous
+    return f"{table_html}\n\n{content}"
+    
 # Script principal
 def main():
     print("Script started...")
@@ -81,7 +94,7 @@ def main():
         return
 
     # Génération du contenu encadré
-    framed_content = generate_ascii_frame(content, season, commits)
+    framed_content = generate_table(content, season, commits)
 
     # Écriture dans le fichier README.md
     try:
