@@ -1,43 +1,5 @@
-import datetime
-import os
 import random
-from github import Github
-
-# Récupération du token GitHub
-GITHUB_TOKEN = os.getenv("GITHUB_TOKEN")
-if not GITHUB_TOKEN:
-    raise ValueError("GITHUB_TOKEN non défini. Vérifiez les secrets de votre workflow.")
-
-# Connectez-vous avec PyGithub
-g = Github(GITHUB_TOKEN)
-
-# Détecter la saison actuelle
-def get_season():
-    today = datetime.date.today()
-    if today >= datetime.date(today.year, 3, 21) and today < datetime.date(today.year, 6, 21):
-        return "spring"
-    elif today >= datetime.date(today.year, 6, 21) and today < datetime.date(today.year, 9, 21):
-        return "summer"
-    elif today >= datetime.date(today.year, 9, 21) and today < datetime.date(today.year, 12, 21):
-        return "autumn"
-    else:
-        return "winter"
-
-# Récupérer le nombre de commits récents
-def get_commit_count(repo_name, days=30):
-    try:
-        print(f"Fetching commits for repository: {repo_name}")
-        repo = g.get_repo(repo_name)
-        since = datetime.datetime.now() - datetime.timedelta(days=days)
-        commits = repo.get_commits(since=since)
-        print(f"Number of commits in the last {days} days: {commits.totalCount}")
-        return commits.totalCount
-    except Exception as e:
-        print(f"Erreur lors de la récupération des commits : {e}")
-        return 0
-
 import requests
-import random
 
 def fetch_random_met_artwork():
     # Endpoint API du Met
@@ -72,9 +34,7 @@ def fetch_random_met_artwork():
         "year": "Date inconnue"
     }
 
-def generate_table(content, season, commits):
-    import random
-
+def generate_table(season, commits):
     themes = {
         "spring": "🌸",
         "summer": "🌞",
@@ -127,37 +87,35 @@ def generate_table(content, season, commits):
   </tr>
 </table>
 """
-    # Ajouter le tableau et le contenu principal
-    return f"{table_html}\n\n{content}"
+    return table_html
 
-# Script principal
-def main():
-    print("Script started...")
-    season = get_season()
-    print(f"Current season: {season}")
-
-    repo_name = "matthieuwerner/matthieuwerner"
-    commits = get_commit_count(repo_name)
-
-    # Lecture du fichier README.md.dist
+def update_readme_with_table(season, commits):
+    # Charger le fichier README.md
     try:
-        with open("README.md.dist", "r") as file:
-            content = file.read()
-        print("README.md.dist loaded successfully.")
+        with open("README.md", "r") as file:
+            readme_content = file.read()
     except FileNotFoundError:
-        print("README.md.dist not found. Please ensure the file exists.")
-        return
+        raise Exception("README.md introuvable. Assurez-vous que le fichier existe.")
 
-    # Génération du contenu encadré
-    framed_content = generate_table(content, season, commits)
+    # Générer le tableau
+    table_content = generate_table(season, commits)
 
-    # Écriture dans le fichier README.md
-    try:
-        with open("README.md", "w") as file:
-            file.write(framed_content)
-        print("README.md generated successfully.")
-    except Exception as e:
-        print(f"Erreur lors de l'écriture dans le fichier README.md : {e}")
+    # Définir les balises pour remplacer le contenu
+    start_tag = "<!-- START_TABLE -->"
+    end_tag = "<!-- END_TABLE -->"
 
+    if start_tag not in readme_content or end_tag not in readme_content:
+        raise Exception(f"Les balises {start_tag} et {end_tag} sont introuvables dans README.md.")
+
+    # Remplacer le contenu entre les balises
+    updated_readme = readme_content.split(start_tag)[0] + start_tag + "\n"
+    updated_readme += table_content + "\n" + end_tag + readme_content.split(end_tag)[1]
+
+    # Écrire le contenu mis à jour dans README.md
+    with open("README.md", "w") as file:
+        file.write(updated_readme)
+    print("README.md mis à jour avec le tableau généré.")
+
+# Exemple d'utilisation
 if __name__ == "__main__":
-    main()
+    update_readme_with_table(season="winter", commits=15)
