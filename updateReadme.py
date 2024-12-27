@@ -102,28 +102,26 @@ def generate_table(content, season, commits):
         grid[pos] = theme
 
     # Construire la partie gauche du tableau (grille)
-    left_table_html = "<table>\n"
-    left_table_html += "<tr>" + "".join(f"<th>Col {i + 1}</th>" for i in range(grid_size)) + "</tr>\n"  # En-têtes des colonnes
+    left_table_html = "<table style='border-collapse: collapse; width: 100%;'>\n"
     for row in range(grid_size):
         start = row * grid_size
         end = start + grid_size
-        row_html = "<tr>" + "".join(f"<td>{cell}</td>" for cell in grid[start:end]) + "</tr>\n"
+        row_html = "<tr>" + "".join(f"<td style='border: 1px solid #ccc; text-align: center;'>{cell}</td>" for cell in grid[start:end]) + "</tr>\n"
         left_table_html += row_html
     left_table_html += "</table>"
 
     # Construire le tableau principal avec un titre et une grande cellule pour l'image
     table_html = f"""
-<table>
-  <caption style="font-size: 1.5em; font-weight: bold;">Saison : {season.capitalize()}</caption>
+<table style="width: 100%; border-collapse: collapse;">
   <tr>
-    <th style="width: 70%;">Grille Saisonnière</th>
-    <th style="width: 30%;">Œuvre d'Art</th>
+    <th style="width: 70%; border: 2px solid #000; text-align: center;">Grille Saisonnière</th>
+    <th style="width: 30%; border: 2px solid #000; text-align: center;">Œuvre d'Art</th>
   </tr>
   <tr>
-    <td style="width: 70%;">{left_table_html}</td>
-    <td style="width: 30%; text-align: center;">
+    <td style="width: 70%; border: 2px solid #ccc;">{left_table_html}</td>
+    <td style="width: 30%; text-align: center; border: 2px solid #ccc;">
       <h3>{artwork['title']}</h3>
-      <p><em>{artwork['artist']}</em>, {artwork['year']}</p>
+      <p><em>{artwork['artist'] or 'Artiste inconnu'}</em>, {artwork['year'] or 'Date inconnue'}</p>
       <img src="{artwork['image']}" alt="{artwork['title']}" style="max-width: 80%; height: auto;">
     </td>
   </tr>
