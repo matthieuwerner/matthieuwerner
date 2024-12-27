@@ -131,58 +131,6 @@ def generate_table(content, season, commits):
     # Ajouter le tableau et le contenu principal
     return f"{table_html}\n\n{content}"
 
-def generate_table(content, season, commits):
-    themes = {
-        "spring": "🌸",
-        "summer": "🌞",
-        "autumn": "🍂",
-        "winter": "❄️"
-    }
-
-    # Récupérer une œuvre d'art du Met
-    artwork = fetch_random_met_artwork()
-
-    # Dimensions de la grille
-    grid_size = 10  # Taille de la grille 10x10 (100 cases)
-    total_cells = grid_size * grid_size
-
-    # Calcul de la densité des éléments saisonniers
-    theme = themes[season]
-    density = min(commits // 5, total_cells)  # Ajuste la densité pour ne pas dépasser la taille de la grille
-
-    # Générer une grille remplie de cases neutres
-    grid = ["⬜"] * total_cells
-
-    # Placer les éléments saisonniers à des positions aléatoires
-    positions = random.sample(range(total_cells), density)
-    for pos in positions:
-        grid[pos] = theme
-
-    # Construire la partie gauche du tableau (grille)
-    left_table_html = "<table>\n"
-    for row in range(grid_size):
-        start = row * grid_size
-        end = start + grid_size
-        row_html = "<tr>" + "".join(f"<td>{cell}</td>" for cell in grid[start:end]) + "</tr>\n"
-        left_table_html += row_html
-    left_table_html += "</table>"
-
-    # Construire le tableau principal avec une grande cellule pour l'image
-    table_html = f"""
-<table>
-  <tr>
-    <td style="width: 70%;">{left_table_html}</td>
-    <td style="width: 30%; text-align: center;">
-      <h3>{artwork['title']}</h3>
-      <p><em>{artwork['artist']}</em>, {artwork['year']}</p>
-      <img src="{artwork['image']}" alt="{artwork['title']}" style="max-width: 100%;">
-    </td>
-  </tr>
-</table>
-"""
-    # Ajouter le tableau et le contenu principal
-    return f"{table_html}\n\n{content}"
-
 # Script principal
 def main():
     print("Script started...")
