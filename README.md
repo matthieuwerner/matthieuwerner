@@ -2,21 +2,21 @@
 <table>
   <tr>
     <td style="width: 70%;"><table>
+<tr><td>⬜</td><td>⬜</td><td>⬜</td><td>⬜</td><td>⬜</td><td>⬜</td><td>❄️</td><td>⬜</td><td>⬜</td><td>⬜</td></tr>
+<tr><td>⬜</td><td>⬜</td><td>⬜</td><td>⬜</td><td>⬜</td><td>⬜</td><td>⬜</td><td>⬜</td><td>⬜</td><td>⬜</td></tr>
+<tr><td>⬜</td><td>⬜</td><td>⬜</td><td>⬜</td><td>⬜</td><td>⬜</td><td>⬜</td><td>⬜</td><td>⬜</td><td>❄️</td></tr>
+<tr><td>⬜</td><td>⬜</td><td>⬜</td><td>❄️</td><td>⬜</td><td>⬜</td><td>❄️</td><td>⬜</td><td>⬜</td><td>⬜</td></tr>
+<tr><td>⬜</td><td>⬜</td><td>⬜</td><td>⬜</td><td>⬜</td><td>⬜</td><td>⬜</td><td>⬜</td><td>⬜</td><td>⬜</td></tr>
 <tr><td>⬜</td><td>⬜</td><td>⬜</td><td>⬜</td><td>⬜</td><td>⬜</td><td>⬜</td><td>⬜</td><td>❄️</td><td>⬜</td></tr>
-<tr><td>⬜</td><td>⬜</td><td>⬜</td><td>⬜</td><td>⬜</td><td>❄️</td><td>⬜</td><td>⬜</td><td>⬜</td><td>⬜</td></tr>
 <tr><td>⬜</td><td>⬜</td><td>⬜</td><td>⬜</td><td>⬜</td><td>⬜</td><td>⬜</td><td>⬜</td><td>⬜</td><td>⬜</td></tr>
-<tr><td>⬜</td><td>⬜</td><td>⬜</td><td>⬜</td><td>❄️</td><td>⬜</td><td>⬜</td><td>⬜</td><td>⬜</td><td>❄️</td></tr>
-<tr><td>⬜</td><td>⬜</td><td>⬜</td><td>❄️</td><td>⬜</td><td>⬜</td><td>⬜</td><td>⬜</td><td>⬜</td><td>⬜</td></tr>
-<tr><td>❄️</td><td>⬜</td><td>⬜</td><td>❄️</td><td>⬜</td><td>⬜</td><td>⬜</td><td>⬜</td><td>⬜</td><td>⬜</td></tr>
+<tr><td>⬜</td><td>⬜</td><td>⬜</td><td>⬜</td><td>⬜</td><td>⬜</td><td>⬜</td><td>⬜</td><td>❄️</td><td>⬜</td></tr>
 <tr><td>⬜</td><td>⬜</td><td>⬜</td><td>⬜</td><td>⬜</td><td>⬜</td><td>⬜</td><td>⬜</td><td>⬜</td><td>⬜</td></tr>
-<tr><td>⬜</td><td>⬜</td><td>⬜</td><td>⬜</td><td>⬜</td><td>⬜</td><td>⬜</td><td>⬜</td><td>⬜</td><td>⬜</td></tr>
-<tr><td>⬜</td><td>⬜</td><td>⬜</td><td>⬜</td><td>⬜</td><td>⬜</td><td>⬜</td><td>⬜</td><td>⬜</td><td>⬜</td></tr>
-<tr><td>⬜</td><td>⬜</td><td>⬜</td><td>⬜</td><td>⬜</td><td>⬜</td><td>⬜</td><td>⬜</td><td>⬜</td><td>⬜</td></tr>
+<tr><td>⬜</td><td>⬜</td><td>⬜</td><td>⬜</td><td>⬜</td><td>⬜</td><td>⬜</td><td>⬜</td><td>⬜</td><td>❄️</td></tr>
 </table></td>
     <td style="width: 30%; text-align: center;">
-      <h3>Boots</h3>
-      <p><em>Manolo Blahnik</em>, ca. 1987</p>
-      <img src="" alt="Boots" style="max-width: 100%;">
+      <h3>Mnyamwezi Pagazi, Africa, from the Savage and Semi-Barbarous Chiefs and Rulers series (N189) issued by Wm. S. Kimball & Co.</h3>
+      <p><em>William S. Kimball & Company</em>, 1888</p>
+      <img src="https://images.metmuseum.org/CRDImages/dp/original/DPB871104.jpg" alt="Mnyamwezi Pagazi, Africa, from the Savage and Semi-Barbarous Chiefs and Rulers series (N189) issued by Wm. S. Kimball & Co." style="max-width: 100%;">
     </td>
   </tr>
 </table>
