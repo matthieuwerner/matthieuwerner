@@ -36,7 +36,6 @@ def get_commit_count(repo_name, days=30):
         print(f"Erreur lors de la récupération des commits : {e}")
         return 0
 
-# Générer le cadre ASCII en Markdown
 def generate_ascii_frame(content, season, commits):
     themes = {
         "spring": "🌸 🌳",
@@ -47,19 +46,27 @@ def generate_ascii_frame(content, season, commits):
     theme = themes[season]
     density = min(commits // 5, 10)  # Ajuste la densité en fonction des commits
 
+    # Générer la répétition du thème
+    theme_line_content = (theme * density).strip()
+    theme_line_length = len(theme_line_content)
+    frame_width = 70  # Largeur fixe du cadre (modifiable)
+
+    # Centrer le thème dans la ligne
+    padding = (frame_width - theme_line_length) // 2
+    theme_line = f"║ {' ' * padding}{theme_line_content}{' ' * padding} ║"
+
     # Générer le cadre
-    frame_top = f"╔{'═' * 70}╗"
-    frame_bottom = f"╚{'═' * 70}╝"
-    theme_line = f"║ {theme * density:<68} ║"  # Alignement gauche pour éviter les débordements
+    frame_top = f"╔{'═' * frame_width}╗"
+    frame_bottom = f"╚{'═' * frame_width}╝"
 
     # Ajouter le cadre autour du contenu
-    framed_content = (
-        f"{frame_top}\n"
-        f"{theme_line}\n"
-        f"{content}\n"
-        f"{theme_line}\n"
-        f"{frame_bottom}"
-    )
+    content_lines = content.split("\n")
+    framed_content = f"{frame_top}\n{theme_line}\n"
+    for line in content_lines:
+        padded_line = line.ljust(frame_width)
+        framed_content += f"║ {padded_line[:frame_width]} ║\n"
+    framed_content += f"{theme_line}\n{frame_bottom}"
+
     return framed_content
 
 # Script principal
