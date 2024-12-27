@@ -36,29 +36,49 @@ def get_commit_count(repo_name, days=30):
         print(f"Erreur lors de la récupération des commits : {e}")
         return 0
 
-def generate_table(content, season, commits):
-    import random
+import requests
+import random
 
+def fetch_random_met_artwork():
+    # Endpoint API du Met
+    api_base_url = "https://collectionapi.metmuseum.org/public/collection/v1"
+
+    # Récupérer les IDs des œuvres
+    response = requests.get(f"{api_base_url}/objects")
+    if response.status_code != 200:
+        raise Exception("Erreur lors de la récupération des œuvres du Met")
+    object_ids = response.json().get("objectIDs", [])
+
+    # Sélectionner un ID au hasard
+    random_id = random.choice(object_ids)
+
+    # Récupérer les détails de l'œuvre
+    response = requests.get(f"{api_base_url}/objects/{random_id}")
+    if response.status_code != 200:
+        raise Exception("Erreur lors de la récupération des détails de l'œuvre")
+    artwork = response.json()
+
+    return {
+        "title": artwork.get("title", "Œuvre inconnue"),
+        "image": artwork.get("primaryImage", ""),
+        "artist": artwork.get("artistDisplayName", "Artiste inconnu"),
+        "year": artwork.get("objectDate", "Date inconnue")
+    }
+
+def generate_table(content, season, commits):
     themes = {
         "spring": "🌸",
         "summer": "🌞",
         "autumn": "🍂",
         "winter": "❄️"
     }
-    artworks = [
-        "🎨 Mona Lisa",
-        "🖼️ Starry Night",
-        "🎭 The Scream",
-        "🗿 Easter Island Moai",
-        "🖌️ The Persistence of Memory"
-    ]
-    # Sélection aléatoire d'une œuvre d'art
-    selected_artwork = random.choice(artworks)
+
+    # Récupérer une œuvre d'art du Met
+    artwork = fetch_random_met_artwork()
 
     # Dimensions de la grille
-    grid_height = 10  # Nombre de lignes
-    grid_width = 10   # Nombre de colonnes
-    total_cells = grid_height * grid_width
+    grid_size = 10  # Taille de la grille 10x10 (100 cases)
+    total_cells = grid_size * grid_size
 
     # Calcul de la densité des éléments saisonniers
     theme = themes[season]
@@ -72,15 +92,28 @@ def generate_table(content, season, commits):
     for pos in positions:
         grid[pos] = theme
 
-    # Construire le tableau HTML ligne par ligne
-    table_html = "<table>\n"
-    for row in range(grid_height):
-        start = row * grid_width
-        end = start + grid_width
+    # Construire la partie gauche du tableau (grille)
+    left_table_html = "<table>\n"
+    for row in range(grid_size):
+        start = row * grid_size
+        end = start + grid_size
         row_html = "<tr>" + "".join(f"<td>{cell}</td>" for cell in grid[start:end]) + "</tr>\n"
-        table_html += row_html
-    table_html += "</table>"
+        left_table_html += row_html
+    left_table_html += "</table>"
 
+    # Construire le tableau principal avec une grande cellule pour l'image
+    table_html = f"""
+<table>
+  <tr>
+    <td style="width: 70%;">{left_table_html}</td>
+    <td style="width: 30%; text-align: center;">
+      <h3>{artwork['title']}</h3>
+      <p><em>{artwork['artist']}</em>, {artwork['year']}</p>
+      <img src="{artwork['image']}" alt="{artwork['title']}" style="max-width: 100%;">
+    </td>
+  </tr>
+</table>
+"""
     # Ajouter le tableau et le contenu principal
     return f"{table_html}\n\n{content}"
 
