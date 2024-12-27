@@ -81,13 +81,17 @@ def generate_table(season, commits):
     positions = random.sample(range(total_cells), density)
     for pos in positions:
         grid[pos] = theme
-    left_table_html = "<table style='border-collapse: collapse; width: 100%;'>\n"
+
+    # Construire la partie gauche du tableau (grille)
+    left_table_html = "<table style='border-collapse: collapse; width: 100%; border: none;'>\n"
     for row in range(grid_size):
         start = row * grid_size
         end = start + grid_size
-        row_html = "<tr>" + "".join(f"<td style='text-align: center;'>{cell}</td>" for cell in grid[start:end]) + "</tr>\n"
+        row_html = "<tr>" + "".join(f"<td style='text-align: center; border: none;'>{cell}</td>" for cell in grid[start:end]) + "</tr>\n"
         left_table_html += row_html
     left_table_html += "</table>"
+
+    # Construire le tableau principal avec des titres pour les colonnes
     table_html = f"""
 <table style="width: 100%; border-collapse: collapse; border: 2px solid #000;">
   <tr>
