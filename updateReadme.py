@@ -103,7 +103,6 @@ def generate_table(content, season, commits):
 
     # Construire la partie gauche du tableau (grille)
     left_table_html = "<table style='border-collapse: collapse; width: 100%;'>\n"
-    left_table_html += "<tr>" + "".join(f"<th style='border: 1px solid #ccc;'>Col {i + 1}</th>" for i in range(grid_size)) + "</tr>\n"  # En-têtes des colonnes
     for row in range(grid_size):
         start = row * grid_size
         end = start + grid_size
