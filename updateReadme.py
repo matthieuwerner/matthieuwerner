@@ -103,6 +103,7 @@ def generate_table(content, season, commits):
 
     # Construire la partie gauche du tableau (grille)
     left_table_html = "<table>\n"
+    left_table_html += "<tr>" + "".join(f"<th>Col {i + 1}</th>" for i in range(grid_size)) + "</tr>\n"  # En-têtes des colonnes
     for row in range(grid_size):
         start = row * grid_size
         end = start + grid_size
@@ -114,6 +115,10 @@ def generate_table(content, season, commits):
     table_html = f"""
 <table>
   <caption style="font-size: 1.5em; font-weight: bold;">Saison : {season.capitalize()}</caption>
+  <tr>
+    <th style="width: 70%;">Grille Saisonnière</th>
+    <th style="width: 30%;">Œuvre d'Art</th>
+  </tr>
   <tr>
     <td style="width: 70%;">{left_table_html}</td>
     <td style="width: 30%; text-align: center;">
