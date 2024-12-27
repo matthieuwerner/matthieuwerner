@@ -24,10 +24,16 @@ def get_season():
 
 # Récupérer le nombre de commits récents
 def get_commit_count(repo_name, days=30):
-    repo = g.get_repo(repo_name)  # Nom complet du repo ex: "utilisateur/nom_du_repo"
-    since = datetime.datetime.now() - datetime.timedelta(days=days)
-    commits = repo.get_commits(since=since)
-    return commits.totalCount
+    try:
+        print(f"Fetching commits for repository: {repo_name}")
+        repo = g.get_repo(repo_name)  # Nom complet du repo ex: "utilisateur/nom_du_repo"
+        since = datetime.datetime.now() - datetime.timedelta(days=days)
+        commits = repo.get_commits(since=since)
+        print(f"Number of commits in the last {days} days: {commits.totalCount}")
+        return commits.totalCount
+    except Exception as e:
+        print(f"Erreur lors de la récupération des commits : {e}")
+        return 0
 
 # Générer le cadre ASCII en Markdown
 def generate_ascii_frame(content, season, commits):
@@ -51,18 +57,32 @@ def generate_ascii_frame(content, season, commits):
 
 # Script principal
 def main():
+    print("Script started...")
     season = get_season()
+    print(f"Current season: {season}")
+
     repo_name = "matthieuwerner/matthieuwerner"  # Remplacez par votre dépôt
     commits = get_commit_count(repo_name)
 
-    with open("README.md", "r") as file:
-        content = file.read()
+    # Lecture du fichier README
+    try:
+        with open("README.md", "r") as file:
+            content = file.read()
+        print("README.md loaded successfully.")
+    except FileNotFoundError:
+        print("README.md not found. Please ensure the file exists.")
+        return
 
+    # Génération du contenu encadré
     framed_content = generate_ascii_frame(content, season, commits)
 
-    # Écrire dans le README
-    with open("README.md", "w") as file:
-        file.write(framed_content)
+    # Écriture dans le README
+    try:
+        with open("README.md", "w") as file:
+            file.write(framed_content)
+        print("README.md updated successfully.")
+    except Exception as e:
+        print(f"Erreur lors de l'écriture dans le fichier README.md : {e}")
 
 if __name__ == "__main__":
     main()
