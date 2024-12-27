@@ -38,33 +38,35 @@ def get_commit_count(repo_name, days=30):
 
 def generate_ascii_frame(content, season, commits):
     themes = {
-        "spring": "🌸 🌳",
-        "summer": "🌞 🌴",
-        "autumn": "🍂 🍁",
-        "winter": "❄️ 🌲"
+        "spring": "🌸🌳",
+        "summer": "🌞🌴",
+        "autumn": "🍂🍁",
+        "winter": "❄️🌲"
     }
     theme = themes[season]
     density = min(commits // 5, 10)  # Ajuste la densité en fonction des commits
 
-    # Générer la répétition du thème
-    theme_line_content = (theme * density).strip()
-    theme_line_length = len(theme_line_content)
+    # Configuration de la largeur du cadre
     frame_width = 70  # Largeur fixe du cadre (modifiable)
+    content_lines = content.split("\n")
 
-    # Centrer le thème dans la ligne
-    padding = (frame_width - theme_line_length) // 2
-    theme_line = f"║ {' ' * padding}{theme_line_content}{' ' * padding} ║"
+    # Générer la ligne des thèmes centrée
+    theme_line_content = (theme * density).strip()  # Créer le thème répété
+    theme_line_length = len(theme_line_content)
+    padding_left = (frame_width - theme_line_length) // 2
+    padding_right = frame_width - theme_line_length - padding_left
+    theme_line = f"║{' ' * padding_left}{theme_line_content}{' ' * padding_right}║"
 
-    # Générer le cadre
+    # Générer les lignes du cadre
     frame_top = f"╔{'═' * frame_width}╗"
     frame_bottom = f"╚{'═' * frame_width}╝"
 
-    # Ajouter le cadre autour du contenu
-    content_lines = content.split("\n")
+    # Ajouter chaque ligne du contenu avec un alignement propre
     framed_content = f"{frame_top}\n{theme_line}\n"
     for line in content_lines:
-        padded_line = line.ljust(frame_width)
-        framed_content += f"║ {padded_line[:frame_width]} ║\n"
+        truncated_line = line[:frame_width]  # Tronquer les lignes trop longues
+        padded_line = truncated_line.ljust(frame_width)
+        framed_content += f"║{padded_line}║\n"
     framed_content += f"{theme_line}\n{frame_bottom}"
 
     return framed_content
