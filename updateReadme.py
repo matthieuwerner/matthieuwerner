@@ -38,27 +38,29 @@ def get_commit_count(repo_name, days=30):
 # Générer le cadre ASCII en Markdown
 def generate_ascii_frame(content, season, commits):
     themes = {
-        "spring": "🌸🌳",
-        "summer": "🌞🌴",
-        "autumn": "🍂🍁",
-        "winter": "❄️🌲"
+        "spring": "🌸 🌳",
+        "summer": "🌞 🌴",
+        "autumn": "🍂 🍁",
+        "winter": "❄️ 🌲"
     }
     theme = themes[season]
     density = min(commits // 5, 10)  # Ajuste la densité en fonction des commits
 
+    # Calcul de la largeur dynamique
+    content_lines = content.split("\n")
+    max_content_width = max(len(line) for line in content_lines)
+    frame_width = max(max_content_width + 4, 80)  # Largeur minimale de 80
+
     # Générer le cadre
-    frame_width = 80  # Largeur fixe pour simplifier
     frame_top = f"╔{'═' * (frame_width - 2)}╗"
     frame_bottom = f"╚{'═' * (frame_width - 2)}╝"
-    theme_line = f"║ {theme * density:<{frame_width - 4}} ║"  # Ajustement du thème
+    theme_line = f"║ {theme * density:<{frame_width - 4}} ║"  # Ajustement de la largeur des bordures
 
-    # Ajouter le cadre autour du contenu
-    content_lines = content.split("\n")
+    # Ajouter le cadre autour du contenu avec alignement
     framed_content = frame_top + "\n" + theme_line + "\n"
     for line in content_lines:
-        line = line[:frame_width - 4]  # Couper les lignes trop longues
-        padded_line = line.ljust(frame_width - 4)
-        framed_content += f"║ {padded_line} ║\n"
+        padded_line = line.ljust(max_content_width)  # Alignement gauche
+        framed_content += f"║ {padded_line:<{frame_width - 4}} ║\n"
     framed_content += theme_line + "\n" + frame_bottom
 
     return framed_content
