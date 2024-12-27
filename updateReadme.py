@@ -37,6 +37,8 @@ def get_commit_count(repo_name, days=30):
         return 0
 
 def generate_table(content, season, commits):
+    import random
+
     themes = {
         "spring": "🌸",
         "summer": "🌞",
@@ -53,28 +55,35 @@ def generate_table(content, season, commits):
     # Sélection aléatoire d'une œuvre d'art
     selected_artwork = random.choice(artworks)
 
-    # Générer les éléments saisonniers
-    theme = themes[season]
-    density = min(commits // 5, 10)  # Ajuste la densité en fonction des commits
-    seasonal_elements = theme * density
-    neutral_elements = "⬜" * (10 - density)
+    # Dimensions de la grille
+    grid_height = 50  # Nombre de lignes
+    grid_width = 10   # Nombre de colonnes
+    total_cells = grid_height * grid_width
 
-    # Générer le tableau HTML
-    table_html = f"""
-<table>
-  <tr>
-    <th>Saison : {season.capitalize()}</th>
-    <th>Œuvre d'art</th>
-  </tr>
-  <tr>
-    <td>{seasonal_elements}{neutral_elements}</td>
-    <td>{selected_artwork}</td>
-  </tr>
-</table>
-"""
-    # Ajouter le contenu principal en dessous
+    # Calcul de la densité des éléments saisonniers
+    theme = themes[season]
+    density = min(commits // 5, total_cells)  # Ajuste la densité pour ne pas dépasser la taille de la grille
+
+    # Générer une grille remplie de cases neutres
+    grid = ["⬜"] * total_cells
+
+    # Placer les éléments saisonniers à des positions aléatoires
+    positions = random.sample(range(total_cells), density)
+    for pos in positions:
+        grid[pos] = theme
+
+    # Construire le tableau HTML ligne par ligne
+    table_html = "<table>\n"
+    for row in range(grid_height):
+        start = row * grid_width
+        end = start + grid_width
+        row_html = "<tr>" + "".join(f"<td>{cell}</td>" for cell in grid[start:end]) + "</tr>\n"
+        table_html += row_html
+    table_html += "</table>"
+
+    # Ajouter le tableau et le contenu principal
     return f"{table_html}\n\n{content}"
-    
+
 # Script principal
 def main():
     print("Script started...")
