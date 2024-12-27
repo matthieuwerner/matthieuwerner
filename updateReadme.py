@@ -53,11 +53,13 @@ def generate_ascii_frame(content, season, commits):
     theme_line = f"║ {theme * density:<68} ║"  # Alignement gauche pour éviter les débordements
 
     # Ajouter le cadre autour du contenu
-    framed_content = f"{frame_top}
-{theme_line}
-{content}
-{theme_line}
-{frame_bottom}"
+    framed_content = (
+        f"{frame_top}\n"
+        f"{theme_line}\n"
+        f"{content}\n"
+        f"{theme_line}\n"
+        f"{frame_bottom}"
+    )
     return framed_content
 
 # Script principal
