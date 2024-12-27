@@ -85,7 +85,7 @@ def generate_table(season, commits):
     for row in range(grid_size):
         start = row * grid_size
         end = start + grid_size
-        row_html = "<tr>" + "".join(f"<td style='border: 1px solid #ccc; text-align: center;'>{cell}</td>" for cell in grid[start:end]) + "</tr>\n"
+        row_html = "<tr>" + "".join(f"<td style='text-align: center;'>{cell}</td>" for cell in grid[start:end]) + "</tr>\n"
         left_table_html += row_html
     left_table_html += "</table>"
     table_html = f"""
