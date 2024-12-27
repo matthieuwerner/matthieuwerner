@@ -1,15 +1,26 @@
+
 <table>
+  <tr>
+    <td style="width: 70%;"><table>
+<tr><td>⬜</td><td>⬜</td><td>⬜</td><td>⬜</td><td>⬜</td><td>⬜</td><td>⬜</td><td>⬜</td><td>❄️</td><td>⬜</td></tr>
+<tr><td>⬜</td><td>⬜</td><td>⬜</td><td>⬜</td><td>⬜</td><td>❄️</td><td>⬜</td><td>⬜</td><td>⬜</td><td>⬜</td></tr>
+<tr><td>⬜</td><td>⬜</td><td>⬜</td><td>⬜</td><td>⬜</td><td>⬜</td><td>⬜</td><td>⬜</td><td>⬜</td><td>⬜</td></tr>
+<tr><td>⬜</td><td>⬜</td><td>⬜</td><td>⬜</td><td>❄️</td><td>⬜</td><td>⬜</td><td>⬜</td><td>⬜</td><td>❄️</td></tr>
 <tr><td>⬜</td><td>⬜</td><td>⬜</td><td>❄️</td><td>⬜</td><td>⬜</td><td>⬜</td><td>⬜</td><td>⬜</td><td>⬜</td></tr>
+<tr><td>❄️</td><td>⬜</td><td>⬜</td><td>❄️</td><td>⬜</td><td>⬜</td><td>⬜</td><td>⬜</td><td>⬜</td><td>⬜</td></tr>
 <tr><td>⬜</td><td>⬜</td><td>⬜</td><td>⬜</td><td>⬜</td><td>⬜</td><td>⬜</td><td>⬜</td><td>⬜</td><td>⬜</td></tr>
 <tr><td>⬜</td><td>⬜</td><td>⬜</td><td>⬜</td><td>⬜</td><td>⬜</td><td>⬜</td><td>⬜</td><td>⬜</td><td>⬜</td></tr>
-<tr><td>❄️</td><td>⬜</td><td>⬜</td><td>⬜</td><td>⬜</td><td>⬜</td><td>⬜</td><td>⬜</td><td>⬜</td><td>⬜</td></tr>
 <tr><td>⬜</td><td>⬜</td><td>⬜</td><td>⬜</td><td>⬜</td><td>⬜</td><td>⬜</td><td>⬜</td><td>⬜</td><td>⬜</td></tr>
-<tr><td>❄️</td><td>⬜</td><td>⬜</td><td>⬜</td><td>⬜</td><td>⬜</td><td>⬜</td><td>⬜</td><td>⬜</td><td>⬜</td></tr>
 <tr><td>⬜</td><td>⬜</td><td>⬜</td><td>⬜</td><td>⬜</td><td>⬜</td><td>⬜</td><td>⬜</td><td>⬜</td><td>⬜</td></tr>
-<tr><td>⬜</td><td>⬜</td><td>⬜</td><td>⬜</td><td>❄️</td><td>⬜</td><td>⬜</td><td>⬜</td><td>❄️</td><td>⬜</td></tr>
-<tr><td>⬜</td><td>⬜</td><td>⬜</td><td>⬜</td><td>⬜</td><td>⬜</td><td>⬜</td><td>⬜</td><td>⬜</td><td>❄️</td></tr>
-<tr><td>⬜</td><td>⬜</td><td>⬜</td><td>⬜</td><td>⬜</td><td>⬜</td><td>⬜</td><td>⬜</td><td>⬜</td><td>⬜</td></tr>
+</table></td>
+    <td style="width: 30%; text-align: center;">
+      <h3>Boots</h3>
+      <p><em>Manolo Blahnik</em>, ca. 1987</p>
+      <img src="" alt="Boots" style="max-width: 100%;">
+    </td>
+  </tr>
 </table>
+
 
 # 👨‍💻 Matthieu Werner
 
