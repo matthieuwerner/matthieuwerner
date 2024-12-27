@@ -3,20 +3,20 @@
   <tr>
     <td style="width: 70%;"><table>
 <tr><td>⬜</td><td>⬜</td><td>⬜</td><td>⬜</td><td>⬜</td><td>⬜</td><td>⬜</td><td>⬜</td><td>⬜</td><td>⬜</td></tr>
-<tr><td>⬜</td><td>⬜</td><td>⬜</td><td>❄️</td><td>⬜</td><td>⬜</td><td>⬜</td><td>⬜</td><td>⬜</td><td>❄️</td></tr>
+<tr><td>❄️</td><td>⬜</td><td>⬜</td><td>⬜</td><td>⬜</td><td>❄️</td><td>⬜</td><td>⬜</td><td>⬜</td><td>⬜</td></tr>
+<tr><td>⬜</td><td>⬜</td><td>⬜</td><td>⬜</td><td>⬜</td><td>⬜</td><td>⬜</td><td>⬜</td><td>⬜</td><td>❄️</td></tr>
 <tr><td>⬜</td><td>⬜</td><td>⬜</td><td>⬜</td><td>⬜</td><td>⬜</td><td>⬜</td><td>⬜</td><td>⬜</td><td>⬜</td></tr>
+<tr><td>❄️</td><td>⬜</td><td>⬜</td><td>⬜</td><td>⬜</td><td>⬜</td><td>⬜</td><td>⬜</td><td>⬜</td><td>⬜</td></tr>
 <tr><td>⬜</td><td>⬜</td><td>⬜</td><td>⬜</td><td>⬜</td><td>⬜</td><td>⬜</td><td>⬜</td><td>⬜</td><td>⬜</td></tr>
+<tr><td>⬜</td><td>❄️</td><td>⬜</td><td>⬜</td><td>⬜</td><td>⬜</td><td>⬜</td><td>⬜</td><td>⬜</td><td>⬜</td></tr>
 <tr><td>⬜</td><td>⬜</td><td>⬜</td><td>⬜</td><td>⬜</td><td>⬜</td><td>⬜</td><td>❄️</td><td>⬜</td><td>⬜</td></tr>
-<tr><td>⬜</td><td>⬜</td><td>❄️</td><td>⬜</td><td>⬜</td><td>⬜</td><td>⬜</td><td>⬜</td><td>⬜</td><td>⬜</td></tr>
-<tr><td>⬜</td><td>⬜</td><td>⬜</td><td>⬜</td><td>⬜</td><td>⬜</td><td>⬜</td><td>⬜</td><td>⬜</td><td>⬜</td></tr>
-<tr><td>⬜</td><td>⬜</td><td>⬜</td><td>⬜</td><td>⬜</td><td>⬜</td><td>⬜</td><td>⬜</td><td>⬜</td><td>⬜</td></tr>
-<tr><td>⬜</td><td>⬜</td><td>❄️</td><td>❄️</td><td>⬜</td><td>⬜</td><td>⬜</td><td>❄️</td><td>⬜</td><td>⬜</td></tr>
-<tr><td>⬜</td><td>⬜</td><td>⬜</td><td>⬜</td><td>⬜</td><td>⬜</td><td>⬜</td><td>⬜</td><td>❄️</td><td>⬜</td></tr>
+<tr><td>⬜</td><td>⬜</td><td>⬜</td><td>⬜</td><td>⬜</td><td>⬜</td><td>❄️</td><td>⬜</td><td>⬜</td><td>⬜</td></tr>
+<tr><td>⬜</td><td>⬜</td><td>⬜</td><td>⬜</td><td>⬜</td><td>❄️</td><td>⬜</td><td>⬜</td><td>⬜</td><td>❄️</td></tr>
 </table></td>
     <td style="width: 30%; text-align: center;">
-      <h3>Vise</h3>
-      <p><em></em>, early 18th century</p>
-      <img src="https://images.metmuseum.org/CRDImages/es/original/7252.jpg" alt="Vise" style="max-width: 100%;">
+      <h3>Terracotta rim fragments of kylikes (drinking cups)</h3>
+      <p><em></em>, 6th/5th centuries BCE</p>
+      <img src="https://images.metmuseum.org/CRDImages/gr/original/DVB15542_1_ff.jpg" alt="Terracotta rim fragments of kylikes (drinking cups)" style="max-width: 100%;">
     </td>
   </tr>
 </table>
