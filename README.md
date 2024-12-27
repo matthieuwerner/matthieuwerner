@@ -2,21 +2,21 @@
 <table>
   <tr>
     <td style="width: 70%;"><table>
-<tr><td>⬜</td><td>⬜</td><td>⬜</td><td>❄️</td><td>⬜</td><td>⬜</td><td>⬜</td><td>⬜</td><td>⬜</td><td>❄️</td></tr>
 <tr><td>⬜</td><td>⬜</td><td>⬜</td><td>⬜</td><td>⬜</td><td>⬜</td><td>⬜</td><td>⬜</td><td>⬜</td><td>⬜</td></tr>
 <tr><td>⬜</td><td>⬜</td><td>⬜</td><td>⬜</td><td>⬜</td><td>⬜</td><td>❄️</td><td>⬜</td><td>⬜</td><td>⬜</td></tr>
-<tr><td>⬜</td><td>⬜</td><td>❄️</td><td>⬜</td><td>⬜</td><td>⬜</td><td>❄️</td><td>⬜</td><td>⬜</td><td>⬜</td></tr>
+<tr><td>❄️</td><td>⬜</td><td>⬜</td><td>⬜</td><td>⬜</td><td>❄️</td><td>⬜</td><td>⬜</td><td>⬜</td><td>⬜</td></tr>
+<tr><td>⬜</td><td>⬜</td><td>⬜</td><td>⬜</td><td>⬜</td><td>⬜</td><td>⬜</td><td>❄️</td><td>⬜</td><td>⬜</td></tr>
+<tr><td>⬜</td><td>⬜</td><td>❄️</td><td>⬜</td><td>⬜</td><td>⬜</td><td>⬜</td><td>⬜</td><td>⬜</td><td>⬜</td></tr>
+<tr><td>⬜</td><td>❄️</td><td>⬜</td><td>⬜</td><td>⬜</td><td>⬜</td><td>⬜</td><td>⬜</td><td>⬜</td><td>⬜</td></tr>
 <tr><td>⬜</td><td>⬜</td><td>⬜</td><td>⬜</td><td>⬜</td><td>⬜</td><td>⬜</td><td>⬜</td><td>⬜</td><td>⬜</td></tr>
-<tr><td>⬜</td><td>⬜</td><td>⬜</td><td>❄️</td><td>⬜</td><td>⬜</td><td>⬜</td><td>⬜</td><td>⬜</td><td>⬜</td></tr>
-<tr><td>⬜</td><td>⬜</td><td>⬜</td><td>⬜</td><td>⬜</td><td>⬜</td><td>⬜</td><td>⬜</td><td>⬜</td><td>⬜</td></tr>
-<tr><td>❄️</td><td>⬜</td><td>⬜</td><td>⬜</td><td>⬜</td><td>⬜</td><td>⬜</td><td>⬜</td><td>⬜</td><td>⬜</td></tr>
-<tr><td>⬜</td><td>⬜</td><td>⬜</td><td>⬜</td><td>⬜</td><td>⬜</td><td>⬜</td><td>⬜</td><td>⬜</td><td>⬜</td></tr>
+<tr><td>⬜</td><td>⬜</td><td>❄️</td><td>⬜</td><td>⬜</td><td>⬜</td><td>⬜</td><td>⬜</td><td>⬜</td><td>⬜</td></tr>
+<tr><td>⬜</td><td>⬜</td><td>⬜</td><td>⬜</td><td>⬜</td><td>⬜</td><td>⬜</td><td>⬜</td><td>⬜</td><td>❄️</td></tr>
 <tr><td>⬜</td><td>⬜</td><td>⬜</td><td>⬜</td><td>⬜</td><td>⬜</td><td>⬜</td><td>⬜</td><td>⬜</td><td>⬜</td></tr>
 </table></td>
     <td style="width: 30%; text-align: center;">
-      <h3>A man sings and plays the hurdy gurdy, accompanied by a boy playing the triangle to right, a group of peasants dancing in a ring to left in background, plate 1 and title page for "Diversi capricci"</h3>
-      <p><em>Stefano della Bella</em>, ca. 1644–47</p>
-      <img src="https://images.metmuseum.org/CRDImages/dp/original/DP817351.jpg" alt="A man sings and plays the hurdy gurdy, accompanied by a boy playing the triangle to right, a group of peasants dancing in a ring to left in background, plate 1 and title page for "Diversi capricci"" style="max-width: 100%;">
+      <h3>Anklet</h3>
+      <p><em></em>, 500 BCE–300 CE</p>
+      <img src="https://images.metmuseum.org/CRDImages/as/original/2001_433_644_O1.jpg" alt="Anklet" style="max-width: 100%;">
     </td>
   </tr>
 </table>
