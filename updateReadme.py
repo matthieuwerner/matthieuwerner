@@ -50,18 +50,14 @@ def generate_ascii_frame(content, season, commits):
     # Générer le cadre
     frame_top = f"╔{'═' * 70}╗"
     frame_bottom = f"╚{'═' * 70}╝"
-    theme_line = f"║ {theme * density:<69} ║"  # Alignement gauche pour éviter les débordements
+    theme_line = f"║ {theme * density:<68} ║"  # Alignement gauche pour éviter les débordements
 
     # Ajouter le cadre autour du contenu
-    framed_content = f"""
-```
-{frame_top}
+    framed_content = f"{frame_top}
 {theme_line}
-║ {content.replace('\n', ' '):<69} ║
+{content}
 {theme_line}
-{frame_bottom}
-```
-"""
+{frame_bottom}"
     return framed_content
 
 # Script principal
