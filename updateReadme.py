@@ -1,4 +1,3 @@
-
 import datetime
 import os
 from github import Github
@@ -47,19 +46,23 @@ def generate_ascii_frame(content, season, commits):
     theme = themes[season]
     density = min(commits // 5, 10)  # Ajuste la densité en fonction des commits
 
-    # Générer le cadre
-    frame_top = f"╔{'═' * 70}╗"
-    frame_bottom = f"╚{'═' * 70}╝"
-    theme_line = f"║ {theme * density:<68} ║"  # Alignement gauche pour éviter les débordements
+    # Calcul de la largeur dynamique
+    content_lines = content.split("\n")
+    max_content_width = max(len(line) for line in content_lines)
+    frame_width = max(max_content_width + 4, 80)  # Largeur minimale de 80
 
-    # Ajouter le cadre autour du contenu
-    framed_content = (
-        f"{frame_top}\n"
-        f"{theme_line}\n"
-        f"{content}\n"
-        f"{theme_line}\n"
-        f"{frame_bottom}"
-    )
+    # Générer le cadre
+    frame_top = f"╔{'═' * (frame_width - 2)}╗"
+    frame_bottom = f"╚{'═' * (frame_width - 2)}╝"
+    theme_line = f"║ {theme * density:<{frame_width - 4}} ║"  # Ajustement de la largeur des bordures
+
+    # Ajouter le cadre autour du contenu avec alignement
+    framed_content = frame_top + "\n" + theme_line + "\n"
+    for line in content_lines:
+        padded_line = line.ljust(max_content_width)  # Alignement gauche
+        framed_content += f"║ {padded_line:<{frame_width - 4}} ║\n"
+    framed_content += theme_line + "\n" + frame_bottom
+
     return framed_content
 
 # Script principal
