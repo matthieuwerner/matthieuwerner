@@ -103,6 +103,7 @@ def generate_table(content, season, commits):
 
     # Construire la partie gauche du tableau (grille)
     left_table_html = "<table style='border-collapse: collapse; width: 100%;'>\n"
+    left_table_html += "<tr>" + "".join(f"<th style='border: 1px solid #ccc;'>Col {i + 1}</th>" for i in range(grid_size)) + "</tr>\n"  # En-têtes des colonnes
     for row in range(grid_size):
         start = row * grid_size
         end = start + grid_size
@@ -110,12 +111,12 @@ def generate_table(content, season, commits):
         left_table_html += row_html
     left_table_html += "</table>"
 
-    # Construire le tableau principal avec un titre et une grande cellule pour l'image
+    # Construire le tableau principal avec des titres pour les colonnes
     table_html = f"""
-<table style="width: 100%; border-collapse: collapse;">
+<table style="width: 100%; border-collapse: collapse; border: 2px solid #000;">
   <tr>
-    <th style="width: 70%; border: 2px solid #000; text-align: center;">Grille Saisonnière</th>
-    <th style="width: 30%; border: 2px solid #000; text-align: center;">Œuvre d'Art</th>
+    <th style="width: 70%; text-align: center; border: 2px solid #000;">Grille Saisonnière</th>
+    <th style="width: 30%; text-align: center; border: 2px solid #000;">Œuvre d'Art</th>
   </tr>
   <tr>
     <td style="width: 70%; border: 2px solid #ccc;">{left_table_html}</td>
