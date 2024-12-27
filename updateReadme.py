@@ -35,7 +35,7 @@ def get_commit_count(repo_name, days=30):
         print(f"Erreur lors de la récupération des commits : {e}")
         return 0
 
-# Générer le cadre ASCII en Markdown
+# Générer le cadre ASCII avec gestion des lignes
 def generate_ascii_frame(content, season, commits):
     themes = {
         "spring": "🌸 🌳",
@@ -54,14 +54,14 @@ def generate_ascii_frame(content, season, commits):
     # Générer le cadre
     frame_top = f"╔{'═' * (frame_width - 2)}╗"
     frame_bottom = f"╚{'═' * (frame_width - 2)}╝"
-    theme_line = f"║ {theme * density:<{frame_width - 4}} ║"  # Ajustement de la largeur des bordures
+    theme_line = f"║ {theme:<{frame_width - 4}} ║"  # Alignement gauche
 
-    # Ajouter le cadre autour du contenu avec alignement
-    framed_content = frame_top + "\n" + theme_line + "\n"
+    # Ajouter le cadre autour du contenu avec alignement ligne par ligne
+    framed_content = f"{frame_top}\n{theme_line}\n"
     for line in content_lines:
-        padded_line = line.ljust(max_content_width)  # Alignement gauche
-        framed_content += f"║ {padded_line:<{frame_width - 4}} ║\n"
-    framed_content += theme_line + "\n" + frame_bottom
+        padded_line = line.ljust(frame_width - 4)  # Alignement gauche
+        framed_content += f"║ {padded_line} ║\n"
+    framed_content += f"{theme_line}\n{frame_bottom}"
 
     return framed_content
 
