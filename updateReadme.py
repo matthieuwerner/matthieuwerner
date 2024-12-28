@@ -130,25 +130,31 @@ def generate_table(season, commits):
     for pos in positions:
         grid[pos] = theme
 
-    # Construire la grille avec des lignes séparées par <br>
-    grid_html = "<br>\n".join(
-        " ".join(grid[row * grid_size:(row + 1) * grid_size]) for row in range(grid_size)
-    )
+    # Construire la grille HTML
+    grid_html = "<table style='border-collapse: collapse; width: 100%; font-family: monospace;'>\n"
+    for row in range(grid_size):
+        start = row * grid_size
+        end = start + grid_size
+        row_html = "<tr>" + "".join(f"<td style='padding: 5px; text-align: center;'>{cell}</td>" for cell in grid[start:end]) + "</tr>\n"
+        grid_html += row_html
+    grid_html += "</table>"
 
-    # Construire le contenu global avec un alignement horizontal
+    # Construire le tableau principal avec les deux colonnes
     output_html = f"""
-<div style="display: flex; justify-content: space-between; align-items: flex-start; margin-top: 20px;">
-  <div style="flex: 1; max-width: 70%; font-family: monospace;">
-    <h3 style="margin-bottom: 10px;">Densité de contributions</h3>
-    {grid_html}
-  </div>
-  <div style="flex: 1; max-width: 30%; text-align: center; margin-left: 20px;">
-    <h3>Découverte du jour 🖼️</h3>
-    <p><em>{artwork['title']}</em></p>
-    <p>{artwork['artist'] or "Artiste inconnu"}, {artwork['year'] or "Date inconnue"}</p>
-    <img src="{artwork['image']}" alt="{artwork['title']}" style="max-width: 80%; height: auto; margin-top: 10px;">
-  </div>
-</div>
+<table style="width: 100%; border-collapse: collapse;">
+  <tr>
+    <td style="width: 70%; vertical-align: top; padding-right: 10px;">
+      <h3 style="margin-bottom: 10px;">Densité de contributions</h3>
+      {grid_html}
+    </td>
+    <td style="width: 30%; vertical-align: top; text-align: center; padding-left: 10px;">
+      <h3>Découverte du jour 🖼️</h3>
+      <p><em>{artwork['title']}</em></p>
+      <p>{artwork['artist'] or "Artiste inconnu"}, {artwork['year'] or "Date inconnue"}</p>
+      <img src="{artwork['image']}" alt="{artwork['title']}" style="max-width: 80%; height: auto; margin-top: 10px;">
+    </td>
+  </tr>
+</table>
 """
     return output_html
 
