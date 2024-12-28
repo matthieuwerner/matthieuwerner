@@ -139,15 +139,15 @@ def generate_table(season, commits):
     output_html = f"""
 <table style="width: 100%; border-collapse: collapse;">
   <tr>
-    <td style="width: 70%; vertical-align: top; padding-right: 10px; font-family: monospace;">
+    <td style="width: 60%; vertical-align: top; padding-right: 10px; font-family: monospace; text-align: left; line-height: 1.5;">
       <h3 style="margin-bottom: 10px;">Densité de contributions</h3>
       {grid_html}
     </td>
-    <td style="width: 30%; vertical-align: top; text-align: center; padding-left: 10px;">
+    <td style="width: 40%; vertical-align: top; text-align: center; padding-left: 10px;">
       <h3>Découverte du jour 🖼️</h3>
       <p><em>{artwork['title']}</em></p>
       <p>{artwork['artist'] or "Artiste inconnu"}, {artwork['year'] or "Date inconnue"}</p>
-      <img src="{artwork['image']}" alt="{artwork['title']}" style="max-width: 80%; height: auto; margin-top: 10px;">
+      <img src="{artwork['image']}" alt="{artwork['title']}" style="max-width: 90%; height: auto; margin-top: 10px;">
     </td>
   </tr>
 </table>
