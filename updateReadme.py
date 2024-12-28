@@ -130,20 +130,19 @@ def generate_table(season, commits):
     for pos in positions:
         grid[pos] = theme
 
-    # Construire la grille avec des <div> et <br>
-    grid_html = ""
-    for row in range(grid_size):
-        row_content = " ".join(grid[row * grid_size:(row + 1) * grid_size])
-        grid_html += f"<div>{row_content}</div><br>\n"
+    # Construire la grille avec des lignes séparées par <br>
+    grid_html = "<br>\n".join(
+        " ".join(grid[row * grid_size:(row + 1) * grid_size]) for row in range(grid_size)
+    )
 
-    # Construire l'ensemble
+    # Construire le contenu global avec un alignement horizontal
     output_html = f"""
-<div style="display: flex; flex-wrap: wrap; justify-content: space-between; align-items: flex-start; gap: 20px; margin-top: 20px;">
+<div style="display: flex; justify-content: space-between; align-items: flex-start; margin-top: 20px;">
   <div style="flex: 1; max-width: 70%; font-family: monospace;">
     <h3 style="margin-bottom: 10px;">Densité de contributions</h3>
     {grid_html}
   </div>
-  <div style="flex: 1; max-width: 30%; text-align: center;">
+  <div style="flex: 1; max-width: 30%; text-align: center; margin-left: 20px;">
     <h3>Découverte du jour 🖼️</h3>
     <p><em>{artwork['title']}</em></p>
     <p>{artwork['artist'] or "Artiste inconnu"}, {artwork['year'] or "Date inconnue"}</p>
