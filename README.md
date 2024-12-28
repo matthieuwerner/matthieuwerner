@@ -40,27 +40,31 @@ class Matt {
 
 <!-- START_TABLE -->
 
-<div style="display: flex; justify-content: space-between; align-items: flex-start; margin-top: 20px;">
-  <div style="flex: 1; max-width: 70%; font-family: monospace;">
-    <h3 style="margin-bottom: 10px;">Densité de contributions</h3>
-    ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜<br>
-⬜ ⬜ ❄️ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜<br>
-⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜<br>
-⬜ ⬜ ⬜ ⬜ ❄️ ⬜ ⬜ ⬜ ⬜ ⬜<br>
-⬜ ⬜ ⬜ ⬜ ⬜ ❄️ ⬜ ⬜ ⬜ ⬜<br>
-❄️ ⬜ ⬜ ❄️ ⬜ ⬜ ❄️ ❄️ ⬜ ❄️<br>
-⬜ ⬜ ❄️ ⬜ ❄️ ⬜ ⬜ ⬜ ⬜ ⬜<br>
-⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜<br>
-⬜ ⬜ ❄️ ❄️ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜<br>
-⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ❄️ ⬜ ⬜
-  </div>
-  <div style="flex: 1; max-width: 30%; text-align: center; margin-left: 20px;">
-    <h3>Découverte du jour 🖼️</h3>
-    <p><em>Textile Fragment</em></p>
-    <p>Artiste inconnu, 13th–14th century</p>
-    <img src="https://images.metmuseum.org/CRDImages/is/original/DP18269.jpg" alt="Textile Fragment" style="max-width: 80%; height: auto; margin-top: 10px;">
-  </div>
-</div>
+<table style="width: 100%; border-collapse: collapse;">
+  <tr>
+    <td style="width: 70%; vertical-align: top; padding-right: 10px;">
+      <h3 style="margin-bottom: 10px;">Densité de contributions</h3>
+      <table style='border-collapse: collapse; width: 100%; font-family: monospace;'>
+<tr><td style='padding: 5px; text-align: center;'>⬜</td><td style='padding: 5px; text-align: center;'>⬜</td><td style='padding: 5px; text-align: center;'>⬜</td><td style='padding: 5px; text-align: center;'>⬜</td><td style='padding: 5px; text-align: center;'>⬜</td><td style='padding: 5px; text-align: center;'>⬜</td><td style='padding: 5px; text-align: center;'>⬜</td><td style='padding: 5px; text-align: center;'>❄️</td><td style='padding: 5px; text-align: center;'>⬜</td><td style='padding: 5px; text-align: center;'>⬜</td></tr>
+<tr><td style='padding: 5px; text-align: center;'>⬜</td><td style='padding: 5px; text-align: center;'>⬜</td><td style='padding: 5px; text-align: center;'>⬜</td><td style='padding: 5px; text-align: center;'>⬜</td><td style='padding: 5px; text-align: center;'>❄️</td><td style='padding: 5px; text-align: center;'>❄️</td><td style='padding: 5px; text-align: center;'>⬜</td><td style='padding: 5px; text-align: center;'>❄️</td><td style='padding: 5px; text-align: center;'>⬜</td><td style='padding: 5px; text-align: center;'>⬜</td></tr>
+<tr><td style='padding: 5px; text-align: center;'>⬜</td><td style='padding: 5px; text-align: center;'>⬜</td><td style='padding: 5px; text-align: center;'>⬜</td><td style='padding: 5px; text-align: center;'>⬜</td><td style='padding: 5px; text-align: center;'>⬜</td><td style='padding: 5px; text-align: center;'>⬜</td><td style='padding: 5px; text-align: center;'>⬜</td><td style='padding: 5px; text-align: center;'>⬜</td><td style='padding: 5px; text-align: center;'>⬜</td><td style='padding: 5px; text-align: center;'>⬜</td></tr>
+<tr><td style='padding: 5px; text-align: center;'>⬜</td><td style='padding: 5px; text-align: center;'>⬜</td><td style='padding: 5px; text-align: center;'>⬜</td><td style='padding: 5px; text-align: center;'>⬜</td><td style='padding: 5px; text-align: center;'>⬜</td><td style='padding: 5px; text-align: center;'>⬜</td><td style='padding: 5px; text-align: center;'>⬜</td><td style='padding: 5px; text-align: center;'>⬜</td><td style='padding: 5px; text-align: center;'>⬜</td><td style='padding: 5px; text-align: center;'>⬜</td></tr>
+<tr><td style='padding: 5px; text-align: center;'>⬜</td><td style='padding: 5px; text-align: center;'>⬜</td><td style='padding: 5px; text-align: center;'>⬜</td><td style='padding: 5px; text-align: center;'>⬜</td><td style='padding: 5px; text-align: center;'>⬜</td><td style='padding: 5px; text-align: center;'>⬜</td><td style='padding: 5px; text-align: center;'>⬜</td><td style='padding: 5px; text-align: center;'>⬜</td><td style='padding: 5px; text-align: center;'>❄️</td><td style='padding: 5px; text-align: center;'>⬜</td></tr>
+<tr><td style='padding: 5px; text-align: center;'>⬜</td><td style='padding: 5px; text-align: center;'>⬜</td><td style='padding: 5px; text-align: center;'>⬜</td><td style='padding: 5px; text-align: center;'>⬜</td><td style='padding: 5px; text-align: center;'>⬜</td><td style='padding: 5px; text-align: center;'>⬜</td><td style='padding: 5px; text-align: center;'>⬜</td><td style='padding: 5px; text-align: center;'>⬜</td><td style='padding: 5px; text-align: center;'>⬜</td><td style='padding: 5px; text-align: center;'>⬜</td></tr>
+<tr><td style='padding: 5px; text-align: center;'>❄️</td><td style='padding: 5px; text-align: center;'>⬜</td><td style='padding: 5px; text-align: center;'>⬜</td><td style='padding: 5px; text-align: center;'>⬜</td><td style='padding: 5px; text-align: center;'>⬜</td><td style='padding: 5px; text-align: center;'>⬜</td><td style='padding: 5px; text-align: center;'>⬜</td><td style='padding: 5px; text-align: center;'>⬜</td><td style='padding: 5px; text-align: center;'>⬜</td><td style='padding: 5px; text-align: center;'>⬜</td></tr>
+<tr><td style='padding: 5px; text-align: center;'>⬜</td><td style='padding: 5px; text-align: center;'>⬜</td><td style='padding: 5px; text-align: center;'>⬜</td><td style='padding: 5px; text-align: center;'>⬜</td><td style='padding: 5px; text-align: center;'>⬜</td><td style='padding: 5px; text-align: center;'>⬜</td><td style='padding: 5px; text-align: center;'>⬜</td><td style='padding: 5px; text-align: center;'>⬜</td><td style='padding: 5px; text-align: center;'>❄️</td><td style='padding: 5px; text-align: center;'>⬜</td></tr>
+<tr><td style='padding: 5px; text-align: center;'>⬜</td><td style='padding: 5px; text-align: center;'>❄️</td><td style='padding: 5px; text-align: center;'>⬜</td><td style='padding: 5px; text-align: center;'>❄️</td><td style='padding: 5px; text-align: center;'>⬜</td><td style='padding: 5px; text-align: center;'>⬜</td><td style='padding: 5px; text-align: center;'>❄️</td><td style='padding: 5px; text-align: center;'>⬜</td><td style='padding: 5px; text-align: center;'>⬜</td><td style='padding: 5px; text-align: center;'>⬜</td></tr>
+<tr><td style='padding: 5px; text-align: center;'>⬜</td><td style='padding: 5px; text-align: center;'>❄️</td><td style='padding: 5px; text-align: center;'>⬜</td><td style='padding: 5px; text-align: center;'>⬜</td><td style='padding: 5px; text-align: center;'>❄️</td><td style='padding: 5px; text-align: center;'>⬜</td><td style='padding: 5px; text-align: center;'>⬜</td><td style='padding: 5px; text-align: center;'>⬜</td><td style='padding: 5px; text-align: center;'>⬜</td><td style='padding: 5px; text-align: center;'>❄️</td></tr>
+</table>
+    </td>
+    <td style="width: 30%; vertical-align: top; text-align: center; padding-left: 10px;">
+      <h3>Découverte du jour 🖼️</h3>
+      <p><em>Terracotta fragment of a kylix (drinking cup)</em></p>
+      <p>Artiste inconnu, 6th/5th centuries BCE</p>
+      <img src="https://images.metmuseum.org/CRDImages/gr/original/DVB15746_1_ff.jpg" alt="Terracotta fragment of a kylix (drinking cup)" style="max-width: 80%; height: auto; margin-top: 10px;">
+    </td>
+  </tr>
+</table>
 
 <!-- END_TABLE -->
 
