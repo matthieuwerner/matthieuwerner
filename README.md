@@ -42,24 +42,26 @@ class Matt {
 
 <table style="width: 100%; border-collapse: collapse;">
   <tr>
-    <td style="width: 60%; vertical-align: top; padding-right: 10px; font-family: monospace; text-align: left; line-height: 1.5;">
+    <td style="width: 70%; vertical-align: top; padding-right: 10px;">
       <h3 style="margin-bottom: 10px;">Densité de contributions</h3>
-      ❄️ ⬜ ❄️ ❄️ ⬜ ⬜ ⬜ ❄️ ⬜ ⬜<br>
-⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜<br>
-⬜ ⬜ ⬜ ⬜ ❄️ ⬜ ⬜ ⬜ ⬜ ⬜<br>
-⬜ ⬜ ⬜ ❄️ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜<br>
-⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜<br>
-⬜ ⬜ ⬜ ⬜ ❄️ ⬜ ⬜ ⬜ ⬜ ⬜<br>
-❄️ ⬜ ⬜ ⬜ ❄️ ❄️ ❄️ ⬜ ⬜ ⬜<br>
-❄️ ⬜ ⬜ ⬜ ⬜ ⬜ ❄️ ⬜ ⬜ ⬜<br>
-⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜<br>
-❄️ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜
+      <table style='border-collapse: collapse; width: 100%; font-family: monospace;'>
+<tr><td style='padding: 5px; text-align: center;'>⬜</td><td style='padding: 5px; text-align: center;'>⬜</td><td style='padding: 5px; text-align: center;'>⬜</td><td style='padding: 5px; text-align: center;'>⬜</td><td style='padding: 5px; text-align: center;'>⬜</td><td style='padding: 5px; text-align: center;'>⬜</td><td style='padding: 5px; text-align: center;'>⬜</td><td style='padding: 5px; text-align: center;'>⬜</td><td style='padding: 5px; text-align: center;'>⬜</td><td style='padding: 5px; text-align: center;'>⬜</td></tr>
+<tr><td style='padding: 5px; text-align: center;'>❄️</td><td style='padding: 5px; text-align: center;'>⬜</td><td style='padding: 5px; text-align: center;'>⬜</td><td style='padding: 5px; text-align: center;'>⬜</td><td style='padding: 5px; text-align: center;'>❄️</td><td style='padding: 5px; text-align: center;'>⬜</td><td style='padding: 5px; text-align: center;'>⬜</td><td style='padding: 5px; text-align: center;'>⬜</td><td style='padding: 5px; text-align: center;'>⬜</td><td style='padding: 5px; text-align: center;'>⬜</td></tr>
+<tr><td style='padding: 5px; text-align: center;'>⬜</td><td style='padding: 5px; text-align: center;'>⬜</td><td style='padding: 5px; text-align: center;'>⬜</td><td style='padding: 5px; text-align: center;'>⬜</td><td style='padding: 5px; text-align: center;'>⬜</td><td style='padding: 5px; text-align: center;'>⬜</td><td style='padding: 5px; text-align: center;'>⬜</td><td style='padding: 5px; text-align: center;'>❄️</td><td style='padding: 5px; text-align: center;'>⬜</td><td style='padding: 5px; text-align: center;'>❄️</td></tr>
+<tr><td style='padding: 5px; text-align: center;'>⬜</td><td style='padding: 5px; text-align: center;'>⬜</td><td style='padding: 5px; text-align: center;'>⬜</td><td style='padding: 5px; text-align: center;'>❄️</td><td style='padding: 5px; text-align: center;'>❄️</td><td style='padding: 5px; text-align: center;'>⬜</td><td style='padding: 5px; text-align: center;'>⬜</td><td style='padding: 5px; text-align: center;'>⬜</td><td style='padding: 5px; text-align: center;'>⬜</td><td style='padding: 5px; text-align: center;'>⬜</td></tr>
+<tr><td style='padding: 5px; text-align: center;'>⬜</td><td style='padding: 5px; text-align: center;'>⬜</td><td style='padding: 5px; text-align: center;'>⬜</td><td style='padding: 5px; text-align: center;'>⬜</td><td style='padding: 5px; text-align: center;'>⬜</td><td style='padding: 5px; text-align: center;'>❄️</td><td style='padding: 5px; text-align: center;'>⬜</td><td style='padding: 5px; text-align: center;'>⬜</td><td style='padding: 5px; text-align: center;'>❄️</td><td style='padding: 5px; text-align: center;'>⬜</td></tr>
+<tr><td style='padding: 5px; text-align: center;'>⬜</td><td style='padding: 5px; text-align: center;'>⬜</td><td style='padding: 5px; text-align: center;'>⬜</td><td style='padding: 5px; text-align: center;'>❄️</td><td style='padding: 5px; text-align: center;'>⬜</td><td style='padding: 5px; text-align: center;'>⬜</td><td style='padding: 5px; text-align: center;'>⬜</td><td style='padding: 5px; text-align: center;'>⬜</td><td style='padding: 5px; text-align: center;'>⬜</td><td style='padding: 5px; text-align: center;'>⬜</td></tr>
+<tr><td style='padding: 5px; text-align: center;'>⬜</td><td style='padding: 5px; text-align: center;'>⬜</td><td style='padding: 5px; text-align: center;'>⬜</td><td style='padding: 5px; text-align: center;'>⬜</td><td style='padding: 5px; text-align: center;'>⬜</td><td style='padding: 5px; text-align: center;'>⬜</td><td style='padding: 5px; text-align: center;'>⬜</td><td style='padding: 5px; text-align: center;'>❄️</td><td style='padding: 5px; text-align: center;'>⬜</td><td style='padding: 5px; text-align: center;'>⬜</td></tr>
+<tr><td style='padding: 5px; text-align: center;'>⬜</td><td style='padding: 5px; text-align: center;'>⬜</td><td style='padding: 5px; text-align: center;'>⬜</td><td style='padding: 5px; text-align: center;'>⬜</td><td style='padding: 5px; text-align: center;'>❄️</td><td style='padding: 5px; text-align: center;'>❄️</td><td style='padding: 5px; text-align: center;'>❄️</td><td style='padding: 5px; text-align: center;'>⬜</td><td style='padding: 5px; text-align: center;'>⬜</td><td style='padding: 5px; text-align: center;'>⬜</td></tr>
+<tr><td style='padding: 5px; text-align: center;'>⬜</td><td style='padding: 5px; text-align: center;'>⬜</td><td style='padding: 5px; text-align: center;'>⬜</td><td style='padding: 5px; text-align: center;'>⬜</td><td style='padding: 5px; text-align: center;'>⬜</td><td style='padding: 5px; text-align: center;'>⬜</td><td style='padding: 5px; text-align: center;'>❄️</td><td style='padding: 5px; text-align: center;'>⬜</td><td style='padding: 5px; text-align: center;'>⬜</td><td style='padding: 5px; text-align: center;'>⬜</td></tr>
+<tr><td style='padding: 5px; text-align: center;'>⬜</td><td style='padding: 5px; text-align: center;'>⬜</td><td style='padding: 5px; text-align: center;'>⬜</td><td style='padding: 5px; text-align: center;'>⬜</td><td style='padding: 5px; text-align: center;'>⬜</td><td style='padding: 5px; text-align: center;'>⬜</td><td style='padding: 5px; text-align: center;'>⬜</td><td style='padding: 5px; text-align: center;'>⬜</td><td style='padding: 5px; text-align: center;'>⬜</td><td style='padding: 5px; text-align: center;'>⬜</td></tr>
+</table>
     </td>
-    <td style="width: 40%; vertical-align: top; text-align: center; padding-left: 10px;">
+    <td style="width: 30%; vertical-align: top; text-align: center; padding-left: 10px;">
       <h3>Découverte du jour 🖼️</h3>
-      <p><em>Seated Bishop</em></p>
-      <p>Tilman Riemenschneider, ca. 1495</p>
-      <img src="https://images.metmuseum.org/CRDImages/cl/original/DP366900.jpg" alt="Seated Bishop" style="max-width: 90%; height: auto; margin-top: 10px;">
+      <p><em>Consort Yu</em></p>
+      <p>Artiste inconnu, 18th century</p>
+      <img src="https://images.metmuseum.org/CRDImages/as/original/18_146_4_55932.jpg" alt="Consort Yu" style="max-width: 80%; height: auto; margin-top: 10px;">
     </td>
   </tr>
 </table>
