@@ -115,43 +115,43 @@ def generate_table(season, commits):
         "autumn": "🍂",
         "winter": "❄️"
     }
-    artwork = fetch_computer_related_artworks()
-    grid_size = 10
+    artwork = fetch_random_met_artwork()
+    grid_size = 10  # Taille de la grille (10x10)
     total_cells = grid_size * grid_size
+
     theme = themes[season]
-    density = min(commits // 5, total_cells)
+    density = min(commits // 5, total_cells)  # Ajuste la densité
+
+    # Générer une liste de cellules avec des cases neutres
     grid = ["⬜"] * total_cells
+
+    # Placer des éléments saisonniers à des positions aléatoires
     positions = random.sample(range(total_cells), density)
     for pos in positions:
         grid[pos] = theme
 
-    # Construire la partie gauche du tableau (grille)
-    left_table_html = "<table style='border-collapse: collapse; width: 100%; border: none;'>\n"
+    # Construire la grille avec des <div> et <br>
+    grid_html = ""
     for row in range(grid_size):
-        start = row * grid_size
-        end = start + grid_size
-        row_html = "<tr>" + "".join(f"<td style='text-align: center; border: none;'>{cell}</td>" for cell in grid[start:end]) + "</tr>\n"
-        left_table_html += row_html
-    left_table_html += "</table>"
+        row_content = " ".join(grid[row * grid_size:(row + 1) * grid_size])
+        grid_html += f"<div>{row_content}</div><br>\n"
 
-    # Construire le tableau principal avec des titres pour les colonnes
-    table_html = f"""
-<table style="width: 100%; border-collapse: collapse; border: 2px solid #000;">
-  <tr>
-    <th style="width: 70%; text-align: center; border: 2px solid #000;">Densité de contributions</th>
-    <th style="width: 30%; text-align: center; border: 2px solid #000;">Découverte du jour 🖼️</th>
-  </tr>
-  <tr>
-    <td style="width: 70%; border: 2px solid #ccc;">{left_table_html}</td>
-    <td style="width: 30%; text-align: center; border: 2px solid #ccc;">
-      <h3>{artwork['title']}</h3>
-      <p><em>{artwork['artist'] or 'Artiste inconnu'}</em>, {artwork['year'] or 'Date inconnue'}</p>
-      <img src="{artwork['image']}" alt="{artwork['title']}" style="max-width: 80%; height: auto;">
-    </td>
-  </tr>
-</table>
+    # Construire l'ensemble
+    output_html = f"""
+<div style="display: flex; flex-wrap: wrap; justify-content: space-between; align-items: flex-start; gap: 20px; margin-top: 20px;">
+  <div style="flex: 1; max-width: 70%; font-family: monospace;">
+    <h3 style="margin-bottom: 10px;">Densité de contributions</h3>
+    {grid_html}
+  </div>
+  <div style="flex: 1; max-width: 30%; text-align: center;">
+    <h3>Découverte du jour 🖼️</h3>
+    <p><em>{artwork['title']}</em></p>
+    <p>{artwork['artist'] or "Artiste inconnu"}, {artwork['year'] or "Date inconnue"}</p>
+    <img src="{artwork['image']}" alt="{artwork['title']}" style="max-width: 80%; height: auto; margin-top: 10px;">
+  </div>
+</div>
 """
-    return table_html
+    return output_html
 
 # Mettre à jour le README avec des balises dédiées
 def update_readme_with_table(season, commits):
