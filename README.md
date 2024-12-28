@@ -42,26 +42,24 @@ class Matt {
 
 <table style="width: 100%; border-collapse: collapse;">
   <tr>
-    <td style="width: 70%; vertical-align: top; padding-right: 10px;">
+    <td style="width: 70%; vertical-align: top; padding-right: 10px; font-family: monospace;">
       <h3 style="margin-bottom: 10px;">Densité de contributions</h3>
-      <table style='border-collapse: collapse; width: 100%; font-family: monospace;'>
-<tr><td style='padding: 5px; text-align: center;'>⬜</td><td style='padding: 5px; text-align: center;'>⬜</td><td style='padding: 5px; text-align: center;'>⬜</td><td style='padding: 5px; text-align: center;'>⬜</td><td style='padding: 5px; text-align: center;'>⬜</td><td style='padding: 5px; text-align: center;'>⬜</td><td style='padding: 5px; text-align: center;'>⬜</td><td style='padding: 5px; text-align: center;'>❄️</td><td style='padding: 5px; text-align: center;'>⬜</td><td style='padding: 5px; text-align: center;'>⬜</td></tr>
-<tr><td style='padding: 5px; text-align: center;'>⬜</td><td style='padding: 5px; text-align: center;'>⬜</td><td style='padding: 5px; text-align: center;'>⬜</td><td style='padding: 5px; text-align: center;'>⬜</td><td style='padding: 5px; text-align: center;'>❄️</td><td style='padding: 5px; text-align: center;'>❄️</td><td style='padding: 5px; text-align: center;'>⬜</td><td style='padding: 5px; text-align: center;'>❄️</td><td style='padding: 5px; text-align: center;'>⬜</td><td style='padding: 5px; text-align: center;'>⬜</td></tr>
-<tr><td style='padding: 5px; text-align: center;'>⬜</td><td style='padding: 5px; text-align: center;'>⬜</td><td style='padding: 5px; text-align: center;'>⬜</td><td style='padding: 5px; text-align: center;'>⬜</td><td style='padding: 5px; text-align: center;'>⬜</td><td style='padding: 5px; text-align: center;'>⬜</td><td style='padding: 5px; text-align: center;'>⬜</td><td style='padding: 5px; text-align: center;'>⬜</td><td style='padding: 5px; text-align: center;'>⬜</td><td style='padding: 5px; text-align: center;'>⬜</td></tr>
-<tr><td style='padding: 5px; text-align: center;'>⬜</td><td style='padding: 5px; text-align: center;'>⬜</td><td style='padding: 5px; text-align: center;'>⬜</td><td style='padding: 5px; text-align: center;'>⬜</td><td style='padding: 5px; text-align: center;'>⬜</td><td style='padding: 5px; text-align: center;'>⬜</td><td style='padding: 5px; text-align: center;'>⬜</td><td style='padding: 5px; text-align: center;'>⬜</td><td style='padding: 5px; text-align: center;'>⬜</td><td style='padding: 5px; text-align: center;'>⬜</td></tr>
-<tr><td style='padding: 5px; text-align: center;'>⬜</td><td style='padding: 5px; text-align: center;'>⬜</td><td style='padding: 5px; text-align: center;'>⬜</td><td style='padding: 5px; text-align: center;'>⬜</td><td style='padding: 5px; text-align: center;'>⬜</td><td style='padding: 5px; text-align: center;'>⬜</td><td style='padding: 5px; text-align: center;'>⬜</td><td style='padding: 5px; text-align: center;'>⬜</td><td style='padding: 5px; text-align: center;'>❄️</td><td style='padding: 5px; text-align: center;'>⬜</td></tr>
-<tr><td style='padding: 5px; text-align: center;'>⬜</td><td style='padding: 5px; text-align: center;'>⬜</td><td style='padding: 5px; text-align: center;'>⬜</td><td style='padding: 5px; text-align: center;'>⬜</td><td style='padding: 5px; text-align: center;'>⬜</td><td style='padding: 5px; text-align: center;'>⬜</td><td style='padding: 5px; text-align: center;'>⬜</td><td style='padding: 5px; text-align: center;'>⬜</td><td style='padding: 5px; text-align: center;'>⬜</td><td style='padding: 5px; text-align: center;'>⬜</td></tr>
-<tr><td style='padding: 5px; text-align: center;'>❄️</td><td style='padding: 5px; text-align: center;'>⬜</td><td style='padding: 5px; text-align: center;'>⬜</td><td style='padding: 5px; text-align: center;'>⬜</td><td style='padding: 5px; text-align: center;'>⬜</td><td style='padding: 5px; text-align: center;'>⬜</td><td style='padding: 5px; text-align: center;'>⬜</td><td style='padding: 5px; text-align: center;'>⬜</td><td style='padding: 5px; text-align: center;'>⬜</td><td style='padding: 5px; text-align: center;'>⬜</td></tr>
-<tr><td style='padding: 5px; text-align: center;'>⬜</td><td style='padding: 5px; text-align: center;'>⬜</td><td style='padding: 5px; text-align: center;'>⬜</td><td style='padding: 5px; text-align: center;'>⬜</td><td style='padding: 5px; text-align: center;'>⬜</td><td style='padding: 5px; text-align: center;'>⬜</td><td style='padding: 5px; text-align: center;'>⬜</td><td style='padding: 5px; text-align: center;'>⬜</td><td style='padding: 5px; text-align: center;'>❄️</td><td style='padding: 5px; text-align: center;'>⬜</td></tr>
-<tr><td style='padding: 5px; text-align: center;'>⬜</td><td style='padding: 5px; text-align: center;'>❄️</td><td style='padding: 5px; text-align: center;'>⬜</td><td style='padding: 5px; text-align: center;'>❄️</td><td style='padding: 5px; text-align: center;'>⬜</td><td style='padding: 5px; text-align: center;'>⬜</td><td style='padding: 5px; text-align: center;'>❄️</td><td style='padding: 5px; text-align: center;'>⬜</td><td style='padding: 5px; text-align: center;'>⬜</td><td style='padding: 5px; text-align: center;'>⬜</td></tr>
-<tr><td style='padding: 5px; text-align: center;'>⬜</td><td style='padding: 5px; text-align: center;'>❄️</td><td style='padding: 5px; text-align: center;'>⬜</td><td style='padding: 5px; text-align: center;'>⬜</td><td style='padding: 5px; text-align: center;'>❄️</td><td style='padding: 5px; text-align: center;'>⬜</td><td style='padding: 5px; text-align: center;'>⬜</td><td style='padding: 5px; text-align: center;'>⬜</td><td style='padding: 5px; text-align: center;'>⬜</td><td style='padding: 5px; text-align: center;'>❄️</td></tr>
-</table>
+      ❄️ ⬜ ❄️ ❄️ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜<br>
+❄️ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ❄️ ⬜<br>
+⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜<br>
+⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜<br>
+⬜ ⬜ ❄️ ❄️ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜<br>
+❄️ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜<br>
+⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ❄️ ⬜ ⬜<br>
+❄️ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜<br>
+❄️ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ❄️<br>
+⬜ ⬜ ⬜ ⬜ ❄️ ⬜ ⬜ ⬜ ⬜ ⬜
     </td>
     <td style="width: 30%; vertical-align: top; text-align: center; padding-left: 10px;">
       <h3>Découverte du jour 🖼️</h3>
-      <p><em>Terracotta fragment of a kylix (drinking cup)</em></p>
-      <p>Artiste inconnu, 6th/5th centuries BCE</p>
-      <img src="https://images.metmuseum.org/CRDImages/gr/original/DVB15746_1_ff.jpg" alt="Terracotta fragment of a kylix (drinking cup)" style="max-width: 80%; height: auto; margin-top: 10px;">
+      <p><em>Pendant in the form of a vase</em></p>
+      <p>Artiste inconnu, 5th–4th century BCE</p>
+      <img src="https://images.metmuseum.org/CRDImages/gr/original/DP136000.jpg" alt="Pendant in the form of a vase" style="max-width: 80%; height: auto; margin-top: 10px;">
     </td>
   </tr>
 </table>
