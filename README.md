@@ -40,31 +40,28 @@ class Matt {
 
 <!-- START_TABLE -->
 
-<table style="width: 100%; border-collapse: collapse; border: 2px solid #000;">
-  <tr>
-    <th style="width: 70%; text-align: center; border: 2px solid #000;">Densité de contributions</th>
-    <th style="width: 30%; text-align: center; border: 2px solid #000;">Découverte du jour 🖼️</th>
-  </tr>
-  <tr>
-    <td style="width: 70%; border: 2px solid #ccc;"><table style='border-collapse: collapse; width: 100%; border: none;'>
-<tr><td style='text-align: center; border: none;'>⬜</td><td style='text-align: center; border: none;'>⬜</td><td style='text-align: center; border: none;'>❄️</td><td style='text-align: center; border: none;'>❄️</td><td style='text-align: center; border: none;'>⬜</td><td style='text-align: center; border: none;'>❄️</td><td style='text-align: center; border: none;'>⬜</td><td style='text-align: center; border: none;'>⬜</td><td style='text-align: center; border: none;'>⬜</td><td style='text-align: center; border: none;'>⬜</td></tr>
-<tr><td style='text-align: center; border: none;'>⬜</td><td style='text-align: center; border: none;'>⬜</td><td style='text-align: center; border: none;'>⬜</td><td style='text-align: center; border: none;'>⬜</td><td style='text-align: center; border: none;'>⬜</td><td style='text-align: center; border: none;'>⬜</td><td style='text-align: center; border: none;'>⬜</td><td style='text-align: center; border: none;'>⬜</td><td style='text-align: center; border: none;'>⬜</td><td style='text-align: center; border: none;'>⬜</td></tr>
-<tr><td style='text-align: center; border: none;'>❄️</td><td style='text-align: center; border: none;'>⬜</td><td style='text-align: center; border: none;'>⬜</td><td style='text-align: center; border: none;'>⬜</td><td style='text-align: center; border: none;'>⬜</td><td style='text-align: center; border: none;'>❄️</td><td style='text-align: center; border: none;'>❄️</td><td style='text-align: center; border: none;'>⬜</td><td style='text-align: center; border: none;'>⬜</td><td style='text-align: center; border: none;'>⬜</td></tr>
-<tr><td style='text-align: center; border: none;'>⬜</td><td style='text-align: center; border: none;'>⬜</td><td style='text-align: center; border: none;'>⬜</td><td style='text-align: center; border: none;'>⬜</td><td style='text-align: center; border: none;'>⬜</td><td style='text-align: center; border: none;'>⬜</td><td style='text-align: center; border: none;'>⬜</td><td style='text-align: center; border: none;'>⬜</td><td style='text-align: center; border: none;'>⬜</td><td style='text-align: center; border: none;'>❄️</td></tr>
-<tr><td style='text-align: center; border: none;'>⬜</td><td style='text-align: center; border: none;'>⬜</td><td style='text-align: center; border: none;'>❄️</td><td style='text-align: center; border: none;'>⬜</td><td style='text-align: center; border: none;'>⬜</td><td style='text-align: center; border: none;'>⬜</td><td style='text-align: center; border: none;'>⬜</td><td style='text-align: center; border: none;'>⬜</td><td style='text-align: center; border: none;'>⬜</td><td style='text-align: center; border: none;'>⬜</td></tr>
-<tr><td style='text-align: center; border: none;'>⬜</td><td style='text-align: center; border: none;'>⬜</td><td style='text-align: center; border: none;'>⬜</td><td style='text-align: center; border: none;'>⬜</td><td style='text-align: center; border: none;'>⬜</td><td style='text-align: center; border: none;'>⬜</td><td style='text-align: center; border: none;'>⬜</td><td style='text-align: center; border: none;'>❄️</td><td style='text-align: center; border: none;'>⬜</td><td style='text-align: center; border: none;'>⬜</td></tr>
-<tr><td style='text-align: center; border: none;'>⬜</td><td style='text-align: center; border: none;'>⬜</td><td style='text-align: center; border: none;'>⬜</td><td style='text-align: center; border: none;'>⬜</td><td style='text-align: center; border: none;'>❄️</td><td style='text-align: center; border: none;'>⬜</td><td style='text-align: center; border: none;'>⬜</td><td style='text-align: center; border: none;'>⬜</td><td style='text-align: center; border: none;'>⬜</td><td style='text-align: center; border: none;'>⬜</td></tr>
-<tr><td style='text-align: center; border: none;'>⬜</td><td style='text-align: center; border: none;'>⬜</td><td style='text-align: center; border: none;'>⬜</td><td style='text-align: center; border: none;'>❄️</td><td style='text-align: center; border: none;'>⬜</td><td style='text-align: center; border: none;'>⬜</td><td style='text-align: center; border: none;'>⬜</td><td style='text-align: center; border: none;'>⬜</td><td style='text-align: center; border: none;'>⬜</td><td style='text-align: center; border: none;'>⬜</td></tr>
-<tr><td style='text-align: center; border: none;'>⬜</td><td style='text-align: center; border: none;'>⬜</td><td style='text-align: center; border: none;'>⬜</td><td style='text-align: center; border: none;'>⬜</td><td style='text-align: center; border: none;'>⬜</td><td style='text-align: center; border: none;'>⬜</td><td style='text-align: center; border: none;'>⬜</td><td style='text-align: center; border: none;'>⬜</td><td style='text-align: center; border: none;'>⬜</td><td style='text-align: center; border: none;'>⬜</td></tr>
-<tr><td style='text-align: center; border: none;'>⬜</td><td style='text-align: center; border: none;'>⬜</td><td style='text-align: center; border: none;'>⬜</td><td style='text-align: center; border: none;'>⬜</td><td style='text-align: center; border: none;'>⬜</td><td style='text-align: center; border: none;'>⬜</td><td style='text-align: center; border: none;'>❄️</td><td style='text-align: center; border: none;'>⬜</td><td style='text-align: center; border: none;'>⬜</td><td style='text-align: center; border: none;'>⬜</td></tr>
-</table></td>
-    <td style="width: 30%; text-align: center; border: 2px solid #ccc;">
-      <h3>Four-Cornered Hat</h3>
-      <p><em>Artiste inconnu</em>, 7th–9th century</p>
-      <img src="https://images.metmuseum.org/CRDImages/ao/original/DP-29590-001.jpg" alt="Four-Cornered Hat" style="max-width: 80%; height: auto;">
-    </td>
-  </tr>
-</table>
+<div style="display: flex; flex-wrap: wrap; justify-content: space-between; align-items: flex-start; gap: 20px; margin-top: 20px;">
+  <div style="flex: 1; max-width: 70%; font-family: monospace;">
+    <h3 style="margin-bottom: 10px;">Densité de contributions</h3>
+    <div>⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜</div><br>
+<div>⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜</div><br>
+<div>⬜ ⬜ ⬜ ⬜ ❄️ ❄️ ❄️ ⬜ ⬜ ❄️</div><br>
+<div>⬜ ⬜ ⬜ ⬜ ❄️ ⬜ ⬜ ⬜ ⬜ ⬜</div><br>
+<div>⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ❄️ ⬜ ⬜ ⬜</div><br>
+<div>⬜ ⬜ ❄️ ⬜ ⬜ ⬜ ⬜ ❄️ ⬜ ⬜</div><br>
+<div>⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜</div><br>
+<div>⬜ ❄️ ❄️ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜</div><br>
+<div>⬜ ⬜ ⬜ ⬜ ❄️ ⬜ ⬜ ⬜ ⬜ ❄️</div><br>
+<div>⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜</div><br>
+
+  </div>
+  <div style="flex: 1; max-width: 30%; text-align: center;">
+    <h3>Découverte du jour 🖼️</h3>
+    <p><em>Ball gown</em></p>
+    <p>House of Worth, 1900</p>
+    <img src="https://images.metmuseum.org/CRDImages/ci/original/57.83.22a-b_front_CP4.jpg" alt="Ball gown" style="max-width: 80%; height: auto; margin-top: 10px;">
+  </div>
+</div>
 
 <!-- END_TABLE -->
 
