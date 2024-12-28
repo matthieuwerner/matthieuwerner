@@ -42,24 +42,24 @@ class Matt {
 
 <table style="width: 100%; border-collapse: collapse;">
   <tr>
-    <td style="width: 70%; vertical-align: top; padding-right: 10px; font-family: monospace;">
+    <td style="width: 60%; vertical-align: top; padding-right: 10px; font-family: monospace; text-align: left; line-height: 1.5;">
       <h3 style="margin-bottom: 10px;">Densité de contributions</h3>
-      ❄️ ⬜ ❄️ ❄️ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜<br>
-❄️ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ❄️ ⬜<br>
+      ❄️ ⬜ ❄️ ❄️ ⬜ ⬜ ⬜ ❄️ ⬜ ⬜<br>
 ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜<br>
+⬜ ⬜ ⬜ ⬜ ❄️ ⬜ ⬜ ⬜ ⬜ ⬜<br>
+⬜ ⬜ ⬜ ❄️ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜<br>
 ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜<br>
-⬜ ⬜ ❄️ ❄️ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜<br>
-❄️ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜<br>
-⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ❄️ ⬜ ⬜<br>
-❄️ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜<br>
-❄️ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ❄️<br>
-⬜ ⬜ ⬜ ⬜ ❄️ ⬜ ⬜ ⬜ ⬜ ⬜
+⬜ ⬜ ⬜ ⬜ ❄️ ⬜ ⬜ ⬜ ⬜ ⬜<br>
+❄️ ⬜ ⬜ ⬜ ❄️ ❄️ ❄️ ⬜ ⬜ ⬜<br>
+❄️ ⬜ ⬜ ⬜ ⬜ ⬜ ❄️ ⬜ ⬜ ⬜<br>
+⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜<br>
+❄️ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜
     </td>
-    <td style="width: 30%; vertical-align: top; text-align: center; padding-left: 10px;">
+    <td style="width: 40%; vertical-align: top; text-align: center; padding-left: 10px;">
       <h3>Découverte du jour 🖼️</h3>
-      <p><em>Pendant in the form of a vase</em></p>
-      <p>Artiste inconnu, 5th–4th century BCE</p>
-      <img src="https://images.metmuseum.org/CRDImages/gr/original/DP136000.jpg" alt="Pendant in the form of a vase" style="max-width: 80%; height: auto; margin-top: 10px;">
+      <p><em>Seated Bishop</em></p>
+      <p>Tilman Riemenschneider, ca. 1495</p>
+      <img src="https://images.metmuseum.org/CRDImages/cl/original/DP366900.jpg" alt="Seated Bishop" style="max-width: 90%; height: auto; margin-top: 10px;">
     </td>
   </tr>
 </table>
