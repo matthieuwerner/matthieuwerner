@@ -40,26 +40,25 @@ class Matt {
 
 <!-- START_TABLE -->
 
-<div style="display: flex; flex-wrap: wrap; justify-content: space-between; align-items: flex-start; gap: 20px; margin-top: 20px;">
+<div style="display: flex; justify-content: space-between; align-items: flex-start; margin-top: 20px;">
   <div style="flex: 1; max-width: 70%; font-family: monospace;">
     <h3 style="margin-bottom: 10px;">Densité de contributions</h3>
-    <div>⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜</div><br>
-<div>⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜</div><br>
-<div>⬜ ⬜ ⬜ ⬜ ❄️ ❄️ ❄️ ⬜ ⬜ ❄️</div><br>
-<div>⬜ ⬜ ⬜ ⬜ ❄️ ⬜ ⬜ ⬜ ⬜ ⬜</div><br>
-<div>⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ❄️ ⬜ ⬜ ⬜</div><br>
-<div>⬜ ⬜ ❄️ ⬜ ⬜ ⬜ ⬜ ❄️ ⬜ ⬜</div><br>
-<div>⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜</div><br>
-<div>⬜ ❄️ ❄️ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜</div><br>
-<div>⬜ ⬜ ⬜ ⬜ ❄️ ⬜ ⬜ ⬜ ⬜ ❄️</div><br>
-<div>⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜</div><br>
-
+    ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜<br>
+⬜ ⬜ ❄️ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜<br>
+⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜<br>
+⬜ ⬜ ⬜ ⬜ ❄️ ⬜ ⬜ ⬜ ⬜ ⬜<br>
+⬜ ⬜ ⬜ ⬜ ⬜ ❄️ ⬜ ⬜ ⬜ ⬜<br>
+❄️ ⬜ ⬜ ❄️ ⬜ ⬜ ❄️ ❄️ ⬜ ❄️<br>
+⬜ ⬜ ❄️ ⬜ ❄️ ⬜ ⬜ ⬜ ⬜ ⬜<br>
+⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜<br>
+⬜ ⬜ ❄️ ❄️ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜<br>
+⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ⬜ ❄️ ⬜ ⬜
   </div>
-  <div style="flex: 1; max-width: 30%; text-align: center;">
+  <div style="flex: 1; max-width: 30%; text-align: center; margin-left: 20px;">
     <h3>Découverte du jour 🖼️</h3>
-    <p><em>Ball gown</em></p>
-    <p>House of Worth, 1900</p>
-    <img src="https://images.metmuseum.org/CRDImages/ci/original/57.83.22a-b_front_CP4.jpg" alt="Ball gown" style="max-width: 80%; height: auto; margin-top: 10px;">
+    <p><em>Textile Fragment</em></p>
+    <p>Artiste inconnu, 13th–14th century</p>
+    <img src="https://images.metmuseum.org/CRDImages/is/original/DP18269.jpg" alt="Textile Fragment" style="max-width: 80%; height: auto; margin-top: 10px;">
   </div>
 </div>
 
