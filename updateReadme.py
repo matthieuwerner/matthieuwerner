@@ -64,6 +64,49 @@ def fetch_random_met_artwork():
         "year": "Date inconnue"
     }
 
+def fetch_computer_related_artworks():
+    """
+    Récupère une œuvre liée à l'informatique à partir de l'API du Met.
+    :return: Dictionnaire contenant les informations sur l'œuvre.
+    """
+    api_base_url = "https://collectionapi.metmuseum.org/public/collection/v1"
+    keywords = ["computer", "technology", "digital", "machine"]
+
+    # Rechercher des œuvres pour chaque mot-clé
+    for keyword in keywords:
+        print(f"Recherche d'œuvres avec le mot-clé : {keyword}")
+        response = requests.get(f"{api_base_url}/search", params={"q": keyword})
+        if response.status_code != 200:
+            raise Exception(f"Erreur lors de la recherche pour le mot-clé : {keyword}")
+
+        object_ids = response.json().get("objectIDs", [])
+        if not object_ids:
+            print(f"Aucune œuvre trouvée pour le mot-clé : {keyword}")
+            continue
+
+        # Filtrer jusqu'à obtenir une œuvre avec une image
+        for _ in range(10):  # Limite à 10 essais pour éviter les boucles infinies
+            random_id = random.choice(object_ids)
+            response = requests.get(f"{api_base_url}/objects/{random_id}")
+            if response.status_code != 200:
+                continue
+            artwork = response.json()
+            if artwork.get("primaryImage"):
+                return {
+                    "title": artwork.get("title", "Œuvre inconnue"),
+                    "image": artwork.get("primaryImage"),
+                    "artist": artwork.get("artistDisplayName", "Artiste inconnu"),
+                    "year": artwork.get("objectDate", "Date inconnue")
+                }
+
+    # Si aucune œuvre n'est trouvée
+    return {
+        "title": "Aucune œuvre liée à l'informatique trouvée",
+        "image": "https://upload.wikimedia.org/wikipedia/commons/a/ac/No_image_available.svg",
+        "artist": "Artiste inconnu",
+        "year": "Date inconnue"
+    }
+
 # Générer le tableau
 def generate_table(season, commits):
     themes = {
@@ -72,7 +115,7 @@ def generate_table(season, commits):
         "autumn": "🍂",
         "winter": "❄️"
     }
-    artwork = fetch_random_met_artwork()
+    artwork = fetch_computer_related_artworks()
     grid_size = 10
     total_cells = grid_size * grid_size
     theme = themes[season]
