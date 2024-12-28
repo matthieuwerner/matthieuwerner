@@ -130,20 +130,16 @@ def generate_table(season, commits):
     for pos in positions:
         grid[pos] = theme
 
-    # Construire la grille HTML
-    grid_html = "<table style='border-collapse: collapse; width: 100%; font-family: monospace;'>\n"
-    for row in range(grid_size):
-        start = row * grid_size
-        end = start + grid_size
-        row_html = "<tr>" + "".join(f"<td style='padding: 5px; text-align: center;'>{cell}</td>" for cell in grid[start:end]) + "</tr>\n"
-        grid_html += row_html
-    grid_html += "</table>"
+    # Construire la grille avec des lignes séparées par <br>
+    grid_html = "<br>\n".join(
+        " ".join(grid[row * grid_size:(row + 1) * grid_size]) for row in range(grid_size)
+    )
 
     # Construire le tableau principal avec les deux colonnes
     output_html = f"""
 <table style="width: 100%; border-collapse: collapse;">
   <tr>
-    <td style="width: 70%; vertical-align: top; padding-right: 10px;">
+    <td style="width: 70%; vertical-align: top; padding-right: 10px; font-family: monospace;">
       <h3 style="margin-bottom: 10px;">Densité de contributions</h3>
       {grid_html}
     </td>
