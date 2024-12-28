@@ -138,8 +138,8 @@ def generate_table(season, commits):
     table_html = f"""
 <table style="width: 100%; border-collapse: collapse; border: 2px solid #000;">
   <tr>
-    <th style="width: 70%; text-align: center; border: 2px solid #000;">Grille Saisonnière</th>
-    <th style="width: 30%; text-align: center; border: 2px solid #000;">Œuvre d'Art</th>
+    <th style="width: 70%; text-align: center; border: 2px solid #000;">Densité de contributions</th>
+    <th style="width: 30%; text-align: center; border: 2px solid #000;">Découverte du jour 🖼️</th>
   </tr>
   <tr>
     <td style="width: 70%; border: 2px solid #ccc;">{left_table_html}</td>
