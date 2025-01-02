@@ -1,10 +1,10 @@
 # 👨‍💻 Matthieu Werner
 
-[![LinkedIn](https://img.shields.io/badge/LinkedIn-Matthieu%20Werner-blue?style=for-the-badge&logo=linkedin)](https://www.linkedin.com/in/matthieu-werner-2427a5281/) [![Blog](https://img.shields.io/badge/Blog-Matthieu's%20Articles-brightgreen?style=for-the-badge&logo=hashnode)](https://blog.matthieu-werner.fr)
+[![Blog](https://img.shields.io/badge/Blog-Matthieu's%20Articles-brightgreen?style=for-the-badge&logo=hashnode)](https://blog.matthieu-werner.fr)
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-Matthieu%20Werner-blue?style=for-the-badge&logo=linkedin)](https://www.linkedin.com/in/matthieu-werner-2427a5281/)
 
 
 👋 Hi
-
 
 <table style="border: none; border-collapse: collapse;">
   <tr>
@@ -40,31 +40,119 @@ class Matt {
 
 <!-- START_TABLE -->
 
-<table style="width: 100%; border-collapse: collapse;">
-  <tr>
-    <td style="width: 70%; vertical-align: top; padding-right: 10px;">
-      <h3 style="margin-bottom: 10px;">Densité de contributions</h3>
-      <table style='border-collapse: collapse; width: 100%; font-family: monospace;'>
-<tr><td style='padding: 5px; text-align: center;'>⬜</td><td style='padding: 5px; text-align: center;'>⬜</td><td style='padding: 5px; text-align: center;'>⬜</td><td style='padding: 5px; text-align: center;'>⬜</td><td style='padding: 5px; text-align: center;'>⬜</td><td style='padding: 5px; text-align: center;'>⬜</td><td style='padding: 5px; text-align: center;'>⬜</td><td style='padding: 5px; text-align: center;'>⬜</td><td style='padding: 5px; text-align: center;'>⬜</td><td style='padding: 5px; text-align: center;'>❄️</td></tr>
-<tr><td style='padding: 5px; text-align: center;'>❄️</td><td style='padding: 5px; text-align: center;'>⬜</td><td style='padding: 5px; text-align: center;'>⬜</td><td style='padding: 5px; text-align: center;'>⬜</td><td style='padding: 5px; text-align: center;'>⬜</td><td style='padding: 5px; text-align: center;'>⬜</td><td style='padding: 5px; text-align: center;'>⬜</td><td style='padding: 5px; text-align: center;'>⬜</td><td style='padding: 5px; text-align: center;'>⬜</td><td style='padding: 5px; text-align: center;'>❄️</td></tr>
-<tr><td style='padding: 5px; text-align: center;'>⬜</td><td style='padding: 5px; text-align: center;'>⬜</td><td style='padding: 5px; text-align: center;'>⬜</td><td style='padding: 5px; text-align: center;'>⬜</td><td style='padding: 5px; text-align: center;'>⬜</td><td style='padding: 5px; text-align: center;'>⬜</td><td style='padding: 5px; text-align: center;'>❄️</td><td style='padding: 5px; text-align: center;'>⬜</td><td style='padding: 5px; text-align: center;'>⬜</td><td style='padding: 5px; text-align: center;'>⬜</td></tr>
-<tr><td style='padding: 5px; text-align: center;'>⬜</td><td style='padding: 5px; text-align: center;'>⬜</td><td style='padding: 5px; text-align: center;'>❄️</td><td style='padding: 5px; text-align: center;'>⬜</td><td style='padding: 5px; text-align: center;'>⬜</td><td style='padding: 5px; text-align: center;'>⬜</td><td style='padding: 5px; text-align: center;'>❄️</td><td style='padding: 5px; text-align: center;'>⬜</td><td style='padding: 5px; text-align: center;'>⬜</td><td style='padding: 5px; text-align: center;'>⬜</td></tr>
-<tr><td style='padding: 5px; text-align: center;'>⬜</td><td style='padding: 5px; text-align: center;'>⬜</td><td style='padding: 5px; text-align: center;'>⬜</td><td style='padding: 5px; text-align: center;'>⬜</td><td style='padding: 5px; text-align: center;'>❄️</td><td style='padding: 5px; text-align: center;'>⬜</td><td style='padding: 5px; text-align: center;'>⬜</td><td style='padding: 5px; text-align: center;'>⬜</td><td style='padding: 5px; text-align: center;'>⬜</td><td style='padding: 5px; text-align: center;'>⬜</td></tr>
-<tr><td style='padding: 5px; text-align: center;'>⬜</td><td style='padding: 5px; text-align: center;'>⬜</td><td style='padding: 5px; text-align: center;'>⬜</td><td style='padding: 5px; text-align: center;'>❄️</td><td style='padding: 5px; text-align: center;'>⬜</td><td style='padding: 5px; text-align: center;'>⬜</td><td style='padding: 5px; text-align: center;'>❄️</td><td style='padding: 5px; text-align: center;'>⬜</td><td style='padding: 5px; text-align: center;'>⬜</td><td style='padding: 5px; text-align: center;'>⬜</td></tr>
-<tr><td style='padding: 5px; text-align: center;'>❄️</td><td style='padding: 5px; text-align: center;'>⬜</td><td style='padding: 5px; text-align: center;'>❄️</td><td style='padding: 5px; text-align: center;'>⬜</td><td style='padding: 5px; text-align: center;'>⬜</td><td style='padding: 5px; text-align: center;'>⬜</td><td style='padding: 5px; text-align: center;'>⬜</td><td style='padding: 5px; text-align: center;'>⬜</td><td style='padding: 5px; text-align: center;'>⬜</td><td style='padding: 5px; text-align: center;'>⬜</td></tr>
-<tr><td style='padding: 5px; text-align: center;'>⬜</td><td style='padding: 5px; text-align: center;'>⬜</td><td style='padding: 5px; text-align: center;'>❄️</td><td style='padding: 5px; text-align: center;'>⬜</td><td style='padding: 5px; text-align: center;'>⬜</td><td style='padding: 5px; text-align: center;'>⬜</td><td style='padding: 5px; text-align: center;'>⬜</td><td style='padding: 5px; text-align: center;'>⬜</td><td style='padding: 5px; text-align: center;'>⬜</td><td style='padding: 5px; text-align: center;'>⬜</td></tr>
-<tr><td style='padding: 5px; text-align: center;'>⬜</td><td style='padding: 5px; text-align: center;'>⬜</td><td style='padding: 5px; text-align: center;'>⬜</td><td style='padding: 5px; text-align: center;'>⬜</td><td style='padding: 5px; text-align: center;'>❄️</td><td style='padding: 5px; text-align: center;'>❄️</td><td style='padding: 5px; text-align: center;'>⬜</td><td style='padding: 5px; text-align: center;'>⬜</td><td style='padding: 5px; text-align: center;'>⬜</td><td style='padding: 5px; text-align: center;'>⬜</td></tr>
-<tr><td style='padding: 5px; text-align: center;'>⬜</td><td style='padding: 5px; text-align: center;'>⬜</td><td style='padding: 5px; text-align: center;'>⬜</td><td style='padding: 5px; text-align: center;'>⬜</td><td style='padding: 5px; text-align: center;'>❄️</td><td style='padding: 5px; text-align: center;'>⬜</td><td style='padding: 5px; text-align: center;'>⬜</td><td style='padding: 5px; text-align: center;'>⬜</td><td style='padding: 5px; text-align: center;'>⬜</td><td style='padding: 5px; text-align: center;'>⬜</td></tr>
-</table>
-    </td>
-    <td style="width: 30%; vertical-align: top; text-align: center; padding-left: 10px;">
-      <h3>Découverte du jour 🖼️</h3>
-      <p><em>Celt</em></p>
-      <p>Artiste inconnu, before 16th century</p>
-      <img src="https://images.metmuseum.org/CRDImages/ao/original/hz1994_35_386.jpg" alt="Celt" style="max-width: 80%; height: auto; margin-top: 10px;">
-    </td>
-  </tr>
-</table>
+<svg xmlns="http://www.w3.org/2000/svg" width="700" height="400" style="background-color: black; font-family: Arial, sans-serif;">
+  <!-- Grille de contributions -->
+  <g fill="white" transform="translate(0, 0)">
+    <text x='20.0' y='20.0' text-anchor='middle' dominant-baseline='middle' font-size='20'>❄️</text>
+<text x='60.0' y='20.0' text-anchor='middle' dominant-baseline='middle' font-size='20'>⬜</text>
+<text x='100.0' y='20.0' text-anchor='middle' dominant-baseline='middle' font-size='20'>⬜</text>
+<text x='140.0' y='20.0' text-anchor='middle' dominant-baseline='middle' font-size='20'>❄️</text>
+<text x='180.0' y='20.0' text-anchor='middle' dominant-baseline='middle' font-size='20'>⬜</text>
+<text x='220.0' y='20.0' text-anchor='middle' dominant-baseline='middle' font-size='20'>⬜</text>
+<text x='260.0' y='20.0' text-anchor='middle' dominant-baseline='middle' font-size='20'>⬜</text>
+<text x='300.0' y='20.0' text-anchor='middle' dominant-baseline='middle' font-size='20'>⬜</text>
+<text x='340.0' y='20.0' text-anchor='middle' dominant-baseline='middle' font-size='20'>⬜</text>
+<text x='380.0' y='20.0' text-anchor='middle' dominant-baseline='middle' font-size='20'>❄️</text>
+<text x='20.0' y='60.0' text-anchor='middle' dominant-baseline='middle' font-size='20'>❄️</text>
+<text x='60.0' y='60.0' text-anchor='middle' dominant-baseline='middle' font-size='20'>⬜</text>
+<text x='100.0' y='60.0' text-anchor='middle' dominant-baseline='middle' font-size='20'>⬜</text>
+<text x='140.0' y='60.0' text-anchor='middle' dominant-baseline='middle' font-size='20'>⬜</text>
+<text x='180.0' y='60.0' text-anchor='middle' dominant-baseline='middle' font-size='20'>⬜</text>
+<text x='220.0' y='60.0' text-anchor='middle' dominant-baseline='middle' font-size='20'>⬜</text>
+<text x='260.0' y='60.0' text-anchor='middle' dominant-baseline='middle' font-size='20'>⬜</text>
+<text x='300.0' y='60.0' text-anchor='middle' dominant-baseline='middle' font-size='20'>⬜</text>
+<text x='340.0' y='60.0' text-anchor='middle' dominant-baseline='middle' font-size='20'>⬜</text>
+<text x='380.0' y='60.0' text-anchor='middle' dominant-baseline='middle' font-size='20'>⬜</text>
+<text x='20.0' y='100.0' text-anchor='middle' dominant-baseline='middle' font-size='20'>⬜</text>
+<text x='60.0' y='100.0' text-anchor='middle' dominant-baseline='middle' font-size='20'>⬜</text>
+<text x='100.0' y='100.0' text-anchor='middle' dominant-baseline='middle' font-size='20'>⬜</text>
+<text x='140.0' y='100.0' text-anchor='middle' dominant-baseline='middle' font-size='20'>⬜</text>
+<text x='180.0' y='100.0' text-anchor='middle' dominant-baseline='middle' font-size='20'>⬜</text>
+<text x='220.0' y='100.0' text-anchor='middle' dominant-baseline='middle' font-size='20'>⬜</text>
+<text x='260.0' y='100.0' text-anchor='middle' dominant-baseline='middle' font-size='20'>⬜</text>
+<text x='300.0' y='100.0' text-anchor='middle' dominant-baseline='middle' font-size='20'>⬜</text>
+<text x='340.0' y='100.0' text-anchor='middle' dominant-baseline='middle' font-size='20'>⬜</text>
+<text x='380.0' y='100.0' text-anchor='middle' dominant-baseline='middle' font-size='20'>⬜</text>
+<text x='20.0' y='140.0' text-anchor='middle' dominant-baseline='middle' font-size='20'>⬜</text>
+<text x='60.0' y='140.0' text-anchor='middle' dominant-baseline='middle' font-size='20'>⬜</text>
+<text x='100.0' y='140.0' text-anchor='middle' dominant-baseline='middle' font-size='20'>⬜</text>
+<text x='140.0' y='140.0' text-anchor='middle' dominant-baseline='middle' font-size='20'>⬜</text>
+<text x='180.0' y='140.0' text-anchor='middle' dominant-baseline='middle' font-size='20'>⬜</text>
+<text x='220.0' y='140.0' text-anchor='middle' dominant-baseline='middle' font-size='20'>⬜</text>
+<text x='260.0' y='140.0' text-anchor='middle' dominant-baseline='middle' font-size='20'>⬜</text>
+<text x='300.0' y='140.0' text-anchor='middle' dominant-baseline='middle' font-size='20'>⬜</text>
+<text x='340.0' y='140.0' text-anchor='middle' dominant-baseline='middle' font-size='20'>⬜</text>
+<text x='380.0' y='140.0' text-anchor='middle' dominant-baseline='middle' font-size='20'>⬜</text>
+<text x='20.0' y='180.0' text-anchor='middle' dominant-baseline='middle' font-size='20'>⬜</text>
+<text x='60.0' y='180.0' text-anchor='middle' dominant-baseline='middle' font-size='20'>❄️</text>
+<text x='100.0' y='180.0' text-anchor='middle' dominant-baseline='middle' font-size='20'>⬜</text>
+<text x='140.0' y='180.0' text-anchor='middle' dominant-baseline='middle' font-size='20'>⬜</text>
+<text x='180.0' y='180.0' text-anchor='middle' dominant-baseline='middle' font-size='20'>⬜</text>
+<text x='220.0' y='180.0' text-anchor='middle' dominant-baseline='middle' font-size='20'>⬜</text>
+<text x='260.0' y='180.0' text-anchor='middle' dominant-baseline='middle' font-size='20'>⬜</text>
+<text x='300.0' y='180.0' text-anchor='middle' dominant-baseline='middle' font-size='20'>❄️</text>
+<text x='340.0' y='180.0' text-anchor='middle' dominant-baseline='middle' font-size='20'>❄️</text>
+<text x='380.0' y='180.0' text-anchor='middle' dominant-baseline='middle' font-size='20'>⬜</text>
+<text x='20.0' y='220.0' text-anchor='middle' dominant-baseline='middle' font-size='20'>⬜</text>
+<text x='60.0' y='220.0' text-anchor='middle' dominant-baseline='middle' font-size='20'>⬜</text>
+<text x='100.0' y='220.0' text-anchor='middle' dominant-baseline='middle' font-size='20'>⬜</text>
+<text x='140.0' y='220.0' text-anchor='middle' dominant-baseline='middle' font-size='20'>⬜</text>
+<text x='180.0' y='220.0' text-anchor='middle' dominant-baseline='middle' font-size='20'>⬜</text>
+<text x='220.0' y='220.0' text-anchor='middle' dominant-baseline='middle' font-size='20'>⬜</text>
+<text x='260.0' y='220.0' text-anchor='middle' dominant-baseline='middle' font-size='20'>⬜</text>
+<text x='300.0' y='220.0' text-anchor='middle' dominant-baseline='middle' font-size='20'>⬜</text>
+<text x='340.0' y='220.0' text-anchor='middle' dominant-baseline='middle' font-size='20'>⬜</text>
+<text x='380.0' y='220.0' text-anchor='middle' dominant-baseline='middle' font-size='20'>⬜</text>
+<text x='20.0' y='260.0' text-anchor='middle' dominant-baseline='middle' font-size='20'>⬜</text>
+<text x='60.0' y='260.0' text-anchor='middle' dominant-baseline='middle' font-size='20'>⬜</text>
+<text x='100.0' y='260.0' text-anchor='middle' dominant-baseline='middle' font-size='20'>⬜</text>
+<text x='140.0' y='260.0' text-anchor='middle' dominant-baseline='middle' font-size='20'>⬜</text>
+<text x='180.0' y='260.0' text-anchor='middle' dominant-baseline='middle' font-size='20'>⬜</text>
+<text x='220.0' y='260.0' text-anchor='middle' dominant-baseline='middle' font-size='20'>❄️</text>
+<text x='260.0' y='260.0' text-anchor='middle' dominant-baseline='middle' font-size='20'>⬜</text>
+<text x='300.0' y='260.0' text-anchor='middle' dominant-baseline='middle' font-size='20'>⬜</text>
+<text x='340.0' y='260.0' text-anchor='middle' dominant-baseline='middle' font-size='20'>❄️</text>
+<text x='380.0' y='260.0' text-anchor='middle' dominant-baseline='middle' font-size='20'>❄️</text>
+<text x='20.0' y='300.0' text-anchor='middle' dominant-baseline='middle' font-size='20'>⬜</text>
+<text x='60.0' y='300.0' text-anchor='middle' dominant-baseline='middle' font-size='20'>⬜</text>
+<text x='100.0' y='300.0' text-anchor='middle' dominant-baseline='middle' font-size='20'>❄️</text>
+<text x='140.0' y='300.0' text-anchor='middle' dominant-baseline='middle' font-size='20'>⬜</text>
+<text x='180.0' y='300.0' text-anchor='middle' dominant-baseline='middle' font-size='20'>⬜</text>
+<text x='220.0' y='300.0' text-anchor='middle' dominant-baseline='middle' font-size='20'>⬜</text>
+<text x='260.0' y='300.0' text-anchor='middle' dominant-baseline='middle' font-size='20'>⬜</text>
+<text x='300.0' y='300.0' text-anchor='middle' dominant-baseline='middle' font-size='20'>⬜</text>
+<text x='340.0' y='300.0' text-anchor='middle' dominant-baseline='middle' font-size='20'>⬜</text>
+<text x='380.0' y='300.0' text-anchor='middle' dominant-baseline='middle' font-size='20'>⬜</text>
+<text x='20.0' y='340.0' text-anchor='middle' dominant-baseline='middle' font-size='20'>⬜</text>
+<text x='60.0' y='340.0' text-anchor='middle' dominant-baseline='middle' font-size='20'>❄️</text>
+<text x='100.0' y='340.0' text-anchor='middle' dominant-baseline='middle' font-size='20'>⬜</text>
+<text x='140.0' y='340.0' text-anchor='middle' dominant-baseline='middle' font-size='20'>⬜</text>
+<text x='180.0' y='340.0' text-anchor='middle' dominant-baseline='middle' font-size='20'>⬜</text>
+<text x='220.0' y='340.0' text-anchor='middle' dominant-baseline='middle' font-size='20'>⬜</text>
+<text x='260.0' y='340.0' text-anchor='middle' dominant-baseline='middle' font-size='20'>❄️</text>
+<text x='300.0' y='340.0' text-anchor='middle' dominant-baseline='middle' font-size='20'>⬜</text>
+<text x='340.0' y='340.0' text-anchor='middle' dominant-baseline='middle' font-size='20'>⬜</text>
+<text x='380.0' y='340.0' text-anchor='middle' dominant-baseline='middle' font-size='20'>⬜</text>
+<text x='20.0' y='380.0' text-anchor='middle' dominant-baseline='middle' font-size='20'>⬜</text>
+<text x='60.0' y='380.0' text-anchor='middle' dominant-baseline='middle' font-size='20'>⬜</text>
+<text x='100.0' y='380.0' text-anchor='middle' dominant-baseline='middle' font-size='20'>❄️</text>
+<text x='140.0' y='380.0' text-anchor='middle' dominant-baseline='middle' font-size='20'>❄️</text>
+<text x='180.0' y='380.0' text-anchor='middle' dominant-baseline='middle' font-size='20'>⬜</text>
+<text x='220.0' y='380.0' text-anchor='middle' dominant-baseline='middle' font-size='20'>⬜</text>
+<text x='260.0' y='380.0' text-anchor='middle' dominant-baseline='middle' font-size='20'>⬜</text>
+<text x='300.0' y='380.0' text-anchor='middle' dominant-baseline='middle' font-size='20'>❄️</text>
+<text x='340.0' y='380.0' text-anchor='middle' dominant-baseline='middle' font-size='20'>⬜</text>
+<text x='380.0' y='380.0' text-anchor='middle' dominant-baseline='middle' font-size='20'>⬜</text>
+  </g>
+
+  <!-- Bloc œuvre d'art -->
+  <g transform="translate(420, 20)" fill="white">
+    <text x="0" y="20" font-size="16" fill="white">Découverte du jour 🖼️</text>
+    <text x="0" y="50" font-size="14" fill="white"><tspan font-style="italic">The Pesaro Madonna</tspan></text>
+    <text x="0" y="70" font-size="14" fill="white">Valentin Lefebvre, 1682</text>
+    <image x="0" y="90" width="200" height="200" href="https://images.metmuseum.org/CRDImages/dp/original/DP879757.jpg" />
+  </g>
+</svg>
 
 <!-- END_TABLE -->
 
