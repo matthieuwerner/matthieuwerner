@@ -158,6 +158,69 @@ def generate_table(season, commits):
 """
     return output_html
 
+def generate_svg(season, commits):
+    themes = {
+        "spring": "🌸",
+        "summer": "🌞",
+        "autumn": "🍂",
+        "winter": "❄️"
+    }
+    artwork = fetch_random_met_artwork()
+    grid_size = 10  # Taille de la grille (10x10)
+    cell_size = 40  # Taille d'une cellule (en pixels)
+
+    theme = themes[season]
+    density = min(commits // 5, grid_size * grid_size)  # Ajuste la densité
+
+    # Générer une liste de cellules avec des cases neutres
+    grid = ["⬜"] * (grid_size * grid_size)
+
+    # Placer des éléments saisonniers à des positions aléatoires
+    positions = random.sample(range(grid_size * grid_size), density)
+    for pos in positions:
+        grid[pos] = theme
+
+    # Générer les éléments SVG pour la grille
+    grid_elements = []
+    for i in range(grid_size):
+        for j in range(grid_size):
+            content = grid[i * grid_size + j]
+            x = j * cell_size
+            y = i * cell_size
+            grid_elements.append(
+                f"<text x='{x + cell_size / 2}' y='{y + cell_size / 2}' text-anchor='middle' dominant-baseline='middle' font-size='20'>{content}</text>"
+            )
+
+    # Positionnement des contributions et œuvre d'art
+    grid_svg = "\n".join(grid_elements)
+    artwork_title = artwork['title']
+    artwork_artist = artwork['artist'] or "Artiste inconnu"
+    artwork_year = artwork['year'] or "Date inconnue"
+    artwork_image = artwork['image']
+
+    # Taille totale du SVG
+    svg_width = grid_size * cell_size + 300  # Ajout de l'espace pour l'œuvre d'art
+    svg_height = grid_size * cell_size
+
+    # Générer le SVG complet
+    svg_output = f"""
+<svg xmlns="http://www.w3.org/2000/svg" width="{svg_width}" height="{svg_height}" style="background-color: black; font-family: Arial, sans-serif;">
+  <!-- Grille de contributions -->
+  <g fill="white" transform="translate(0, 0)">
+    {grid_svg}
+  </g>
+
+  <!-- Bloc œuvre d'art -->
+  <g transform="translate({grid_size * cell_size + 20}, 20)" fill="white">
+    <text x="0" y="20" font-size="16" fill="white">Découverte du jour 🖼️</text>
+    <text x="0" y="50" font-size="14" fill="white"><tspan font-style="italic">{artwork_title}</tspan></text>
+    <text x="0" y="70" font-size="14" fill="white">{artwork_artist}, {artwork_year}</text>
+    <image x="0" y="90" width="200" height="200" href="{artwork_image}" />
+  </g>
+</svg>
+"""
+    return svg_output
+
 # Mettre à jour le README avec des balises dédiées
 def update_readme_with_table(season, commits):
     try:
@@ -169,7 +232,7 @@ def update_readme_with_table(season, commits):
     end_tag = "<!-- END_TABLE -->"
     if start_tag not in readme_content or end_tag not in readme_content:
         raise Exception(f"Les balises {start_tag} et {end_tag} sont introuvables dans README.md.dist.")
-    table_content = generate_table(season, commits)
+    table_content = generate_svg(season, commits)
     updated_readme = readme_content.split(start_tag)[0] + start_tag + "\n"
     updated_readme += table_content + "\n" + end_tag + readme_content.split(end_tag)[1]
     with open("README.md", "w") as file:
