@@ -1,7 +1,6 @@
-import datetime
 import os
 import random
-import requests
+import datetime
 from github import Github
 
 # Récupération du token GitHub
@@ -11,6 +10,7 @@ if not GITHUB_TOKEN:
 
 # Connectez-vous avec PyGithub
 g = Github(GITHUB_TOKEN)
+repo_name = "your-username/your-repo"  # Remplacez par votre dépôt
 
 # Détecter la saison actuelle
 def get_season():
@@ -24,27 +24,17 @@ def get_season():
     else:
         return "winter"
 
-# Récupérer le nombre de commits récents
-def get_commit_count(repo_name, days=30):
-    try:
-        print(f"Fetching commits for repository: {repo_name}")
-        repo = g.get_repo(repo_name)
-        since = datetime.datetime.now() - datetime.timedelta(days=days)
-        commits = repo.get_commits(since=since)
-        print(f"Number of commits in the last {days} days: {commits.totalCount}")
-        return commits.totalCount
-    except Exception as e:
-        print(f"Erreur lors de la récupération des commits : {e}")
-        return 0
-
-# Récupérer une œuvre d'art du Met
+# Récupérer une œuvre d'art aléatoire
 def fetch_random_met_artwork():
+    import requests
     api_base_url = "https://collectionapi.metmuseum.org/public/collection/v1"
+
     response = requests.get(f"{api_base_url}/objects")
     if response.status_code != 200:
         raise Exception("Erreur lors de la récupération des œuvres du Met")
     object_ids = response.json().get("objectIDs", [])
-    for _ in range(10):  # Limite à 10 essais
+
+    for _ in range(10):
         random_id = random.choice(object_ids)
         response = requests.get(f"{api_base_url}/objects/{random_id}")
         if response.status_code != 200:
@@ -55,132 +45,34 @@ def fetch_random_met_artwork():
                 "title": artwork.get("title", "Œuvre inconnue"),
                 "image": artwork.get("primaryImage"),
                 "artist": artwork.get("artistDisplayName", "Artiste inconnu"),
-                "year": artwork.get("objectDate", "Date inconnue")
+                "year": artwork.get("objectDate", "Date inconnue"),
             }
     return {
         "title": "Œuvre inconnue",
         "image": "https://upload.wikimedia.org/wikipedia/commons/a/ac/No_image_available.svg",
         "artist": "Artiste inconnu",
-        "year": "Date inconnue"
+        "year": "Date inconnue",
     }
 
-def fetch_computer_related_artworks():
-    """
-    Récupère une œuvre liée à l'informatique à partir de l'API du Met.
-    :return: Dictionnaire contenant les informations sur l'œuvre.
-    """
-    api_base_url = "https://collectionapi.metmuseum.org/public/collection/v1"
-    keywords = ["computer", "technology", "digital", "machine"]
-
-    # Rechercher des œuvres pour chaque mot-clé
-    for keyword in keywords:
-        print(f"Recherche d'œuvres avec le mot-clé : {keyword}")
-        response = requests.get(f"{api_base_url}/search", params={"q": keyword})
-        if response.status_code != 200:
-            raise Exception(f"Erreur lors de la recherche pour le mot-clé : {keyword}")
-
-        object_ids = response.json().get("objectIDs", [])
-        if not object_ids:
-            print(f"Aucune œuvre trouvée pour le mot-clé : {keyword}")
-            continue
-
-        # Filtrer jusqu'à obtenir une œuvre avec une image
-        for _ in range(10):  # Limite à 10 essais pour éviter les boucles infinies
-            random_id = random.choice(object_ids)
-            response = requests.get(f"{api_base_url}/objects/{random_id}")
-            if response.status_code != 200:
-                continue
-            artwork = response.json()
-            if artwork.get("primaryImage"):
-                return {
-                    "title": artwork.get("title", "Œuvre inconnue"),
-                    "image": artwork.get("primaryImage"),
-                    "artist": artwork.get("artistDisplayName", "Artiste inconnu"),
-                    "year": artwork.get("objectDate", "Date inconnue")
-                }
-
-    # Si aucune œuvre n'est trouvée
-    return {
-        "title": "Aucune œuvre liée à l'informatique trouvée",
-        "image": "https://upload.wikimedia.org/wikipedia/commons/a/ac/No_image_available.svg",
-        "artist": "Artiste inconnu",
-        "year": "Date inconnue"
-    }
-
-# Générer le tableau
-def generate_table(season, commits):
-    themes = {
-        "spring": "🌸",
-        "summer": "🌞",
-        "autumn": "🍂",
-        "winter": "❄️"
-    }
-    artwork = fetch_random_met_artwork()
-    grid_size = 10  # Taille de la grille (10x10)
-    total_cells = grid_size * grid_size
-
-    theme = themes[season]
-    density = min(commits // 5, total_cells)  # Ajuste la densité
-
-    # Générer une liste de cellules avec des cases neutres
-    grid = ["⬜"] * total_cells
-
-    # Placer des éléments saisonniers à des positions aléatoires
-    positions = random.sample(range(total_cells), density)
-    for pos in positions:
-        grid[pos] = theme
-
-    # Construire la grille HTML
-    grid_html = "<table style='border-collapse: collapse; width: 100%; font-family: monospace;'>\n"
-    for row in range(grid_size):
-        start = row * grid_size
-        end = start + grid_size
-        row_html = "<tr>" + "".join(f"<td style='padding: 5px; text-align: center;'>{cell}</td>" for cell in grid[start:end]) + "</tr>\n"
-        grid_html += row_html
-    grid_html += "</table>"
-
-    # Construire le tableau principal avec les deux colonnes
-    output_html = f"""
-<table style="width: 100%; border-collapse: collapse;">
-  <tr>
-    <td style="width: 70%; vertical-align: top; padding-right: 10px;">
-      <h3 style="margin-bottom: 10px;">Densité de contributions</h3>
-      {grid_html}
-    </td>
-    <td style="width: 30%; vertical-align: top; text-align: center; padding-left: 10px;">
-      <h3>Découverte du jour 🖼️</h3>
-      <p><em>{artwork['title']}</em></p>
-      <p>{artwork['artist'] or "Artiste inconnu"}, {artwork['year'] or "Date inconnue"}</p>
-      <img src="{artwork['image']}" alt="{artwork['title']}" style="max-width: 80%; height: auto; margin-top: 10px;">
-    </td>
-  </tr>
-</table>
-"""
-    return output_html
-
+# Générer le contenu SVG
 def generate_svg(season, commits):
     themes = {
         "spring": "🌸",
         "summer": "🌞",
         "autumn": "🍂",
-        "winter": "❄️"
+        "winter": "❄️",
     }
     artwork = fetch_random_met_artwork()
-    grid_size = 10  # Taille de la grille (10x10)
-    cell_size = 40  # Taille d'une cellule (en pixels)
+    grid_size = 10
+    cell_size = 40
 
     theme = themes[season]
-    density = min(commits // 5, grid_size * grid_size)  # Ajuste la densité
-
-    # Générer une liste de cellules avec des cases neutres
+    density = min(commits // 5, grid_size * grid_size)
     grid = ["⬜"] * (grid_size * grid_size)
-
-    # Placer des éléments saisonniers à des positions aléatoires
     positions = random.sample(range(grid_size * grid_size), density)
     for pos in positions:
         grid[pos] = theme
 
-    # Générer les éléments SVG pour la grille
     grid_elements = []
     for i in range(grid_size):
         for j in range(grid_size):
@@ -191,62 +83,69 @@ def generate_svg(season, commits):
                 f"<text x='{x + cell_size / 2}' y='{y + cell_size / 2}' text-anchor='middle' dominant-baseline='middle' font-size='20'>{content}</text>"
             )
 
-    # Positionnement des contributions et œuvre d'art
     grid_svg = "\n".join(grid_elements)
-    artwork_title = artwork['title']
-    artwork_artist = artwork['artist'] or "Artiste inconnu"
-    artwork_year = artwork['year'] or "Date inconnue"
-    artwork_image = artwork['image']
-
-    # Taille totale du SVG
-    svg_width = grid_size * cell_size + 300  # Ajout de l'espace pour l'œuvre d'art
+    svg_width = grid_size * cell_size + 300
     svg_height = grid_size * cell_size
 
-    # Générer le SVG complet
     svg_output = f"""
 <svg xmlns="http://www.w3.org/2000/svg" width="{svg_width}" height="{svg_height}" style="background-color: black; font-family: Arial, sans-serif;">
-  <!-- Grille de contributions -->
   <g fill="white" transform="translate(0, 0)">
     {grid_svg}
   </g>
-
-  <!-- Bloc œuvre d'art -->
   <g transform="translate({grid_size * cell_size + 20}, 20)" fill="white">
     <text x="0" y="20" font-size="16" fill="white">Découverte du jour 🖼️</text>
-    <text x="0" y="50" font-size="14" fill="white"><tspan font-style="italic">{artwork_title}</tspan></text>
-    <text x="0" y="70" font-size="14" fill="white">{artwork_artist}, {artwork_year}</text>
-    <image x="0" y="90" width="200" height="200" href="{artwork_image}" />
+    <text x="0" y="50" font-size="14" fill="white"><tspan font-style="italic">{artwork['title']}</tspan></text>
+    <text x="0" y="70" font-size="14" fill="white">{artwork['artist']}, {artwork['year']}</text>
+    <image x="0" y="90" width="200" height="200" href="{artwork['image']}" />
   </g>
 </svg>
 """
     return svg_output
-
-# Mettre à jour le README avec des balises dédiées
-def update_readme_with_table(season, commits):
-    try:
-        with open("README.md.dist", "r") as file:
-            readme_content = file.read()
-    except FileNotFoundError:
-        raise Exception("README.md.dist introuvable.")
-    start_tag = "<!-- START_TABLE -->"
-    end_tag = "<!-- END_TABLE -->"
-    if start_tag not in readme_content or end_tag not in readme_content:
-        raise Exception(f"Les balises {start_tag} et {end_tag} sont introuvables dans README.md.dist.")
-    table_content = generate_svg(season, commits)
-    updated_readme = readme_content.split(start_tag)[0] + start_tag + "\n"
-    updated_readme += table_content + "\n" + end_tag + readme_content.split(end_tag)[1]
-    with open("README.md", "w") as file:
-        file.write(updated_readme)
-    print("README.md mis à jour avec le tableau généré.")
 
 # Script principal
 def main():
     print("Script started...")
     season = get_season()
     print(f"Current season: {season}")
-    repo_name = "matthieuwerner/matthieuwerner"
-    commits = get_commit_count(repo_name)
-    update_readme_with_table(season, commits)
+
+    repo = g.get_repo(repo_name)
+    commits = 50  # Exemple fixe, remplacez par une fonction de récupération réelle
+
+    svg_content = generate_svg(season, commits)
+
+    # Écrire le fichier SVG dans la branche output
+    try:
+        repo.create_file(
+            path="output/generated-svg.svg",
+            message="Update SVG",
+            content=svg_content,
+            branch="output",
+        )
+        print("SVG file successfully created in the output branch.")
+    except Exception as e:
+        print(f"Error creating SVG file: {e}")
+
+    # Ajouter un lien vers le fichier SVG dans le README
+    try:
+        readme = repo.get_contents("README.md", ref="main")
+        updated_readme = readme.decoded_content.decode("utf-8")
+        svg_url = f"https://raw.githubusercontent.com/{repo_name}/output/generated-svg.svg"
+
+        if "<!-- SVG_LINK -->" in updated_readme:
+            updated_readme = updated_readme.replace(
+                "<!-- SVG_LINK -->",
+                f"[![SVG Contributions](https://raw.githubusercontent.com/{repo_name}/output/generated-svg.svg)]({svg_url})",
+            )
+            repo.update_file(
+                path=readme.path,
+                message="Update README with SVG link",
+                content=updated_readme,
+                sha=readme.sha,
+                branch="main",
+            )
+            print("README file successfully updated.")
+    except Exception as e:
+        print(f"Error updating README: {e}")
 
 if __name__ == "__main__":
     main()
