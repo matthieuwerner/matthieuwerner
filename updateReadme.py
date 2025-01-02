@@ -1,6 +1,7 @@
+import datetime
 import os
 import random
-import datetime
+import requests
 from github import Github
 
 # Récupération du token GitHub
@@ -10,7 +11,7 @@ if not GITHUB_TOKEN:
 
 # Connectez-vous avec PyGithub
 g = Github(GITHUB_TOKEN)
-repo_name = "matthieuwerner/matthieuwerner"  # Remplacez par votre dépôt
+repo_name = "matthieuwerner/matthieuwerner"
 
 # Détecter la saison actuelle
 def get_season():
@@ -24,16 +25,26 @@ def get_season():
     else:
         return "winter"
 
-# Récupérer une œuvre d'art aléatoire
-def fetch_random_met_artwork():
-    import requests
-    api_base_url = "https://collectionapi.metmuseum.org/public/collection/v1"
+# Récupérer le nombre de commits récents
+def get_commit_count(repo_name, days=30):
+    try:
+        print(f"Fetching commits for repository: {repo_name}")
+        repo = g.get_repo(repo_name)
+        since = datetime.datetime.now() - datetime.timedelta(days=days)
+        commits = repo.get_commits(since=since)
+        print(f"Number of commits in the last {days} days: {commits.totalCount}")
+        return commits.totalCount
+    except Exception as e:
+        print(f"Erreur lors de la récupération des commits : {e}")
+        return 0
 
+# Récupérer une œuvre d'art du Met
+def fetch_random_met_artwork():
+    api_base_url = "https://collectionapi.metmuseum.org/public/collection/v1"
     response = requests.get(f"{api_base_url}/objects")
     if response.status_code != 200:
         raise Exception("Erreur lors de la récupération des œuvres du Met")
     object_ids = response.json().get("objectIDs", [])
-
     for _ in range(10):
         random_id = random.choice(object_ids)
         response = requests.get(f"{api_base_url}/objects/{random_id}")
@@ -45,13 +56,13 @@ def fetch_random_met_artwork():
                 "title": artwork.get("title", "Œuvre inconnue"),
                 "image": artwork.get("primaryImage"),
                 "artist": artwork.get("artistDisplayName", "Artiste inconnu"),
-                "year": artwork.get("objectDate", "Date inconnue"),
+                "year": artwork.get("objectDate", "Date inconnue")
             }
     return {
         "title": "Œuvre inconnue",
         "image": "https://upload.wikimedia.org/wikipedia/commons/a/ac/No_image_available.svg",
         "artist": "Artiste inconnu",
-        "year": "Date inconnue",
+        "year": "Date inconnue"
     }
 
 # Générer le contenu SVG
@@ -60,7 +71,7 @@ def generate_svg(season, commits):
         "spring": "🌸",
         "summer": "🌞",
         "autumn": "🍂",
-        "winter": "❄️",
+        "winter": "❄️"
     }
     artwork = fetch_random_met_artwork()
     grid_size = 10
@@ -102,50 +113,50 @@ def generate_svg(season, commits):
 """
     return svg_output
 
+# Mettre à jour le fichier README et créer le fichier SVG
+def update_readme_with_svg(season, commits):
+    repo = g.get_repo(repo_name)
+
+    # Générer le contenu SVG
+    svg_content = generate_svg(season, commits)
+    svg_path = "output/generated-svg.svg"
+
+    # Pousser le fichier SVG sur la branche output
+    try:
+        repo.create_file(
+            path=svg_path,
+            message="Update SVG",
+            content=svg_content,
+            branch="output",
+        )
+        print(f"SVG file pushed to branch 'output': {svg_path}")
+    except Exception as e:
+        print(f"Error pushing SVG file: {e}")
+
+    # Mise à jour du README
+    svg_url = f"https://raw.githubusercontent.com/{repo_name}/output/generated-svg.svg"
+    try:
+        with open("README.md.dist", "r") as file:
+            readme_content = file.read()
+
+        start_tag = "<!-- SVG_LINK -->"
+        if start_tag not in readme_content:
+            raise Exception(f"Balise {start_tag} introuvable dans README.md.dist.")
+        updated_readme = readme_content.replace(start_tag, f"![Generated SVG]({svg_url})")
+
+        with open("README.md", "w") as file:
+            file.write(updated_readme)
+        print("README.md mis à jour avec le lien SVG.")
+    except Exception as e:
+        print(f"Error updating README: {e}")
+
 # Script principal
 def main():
     print("Script started...")
     season = get_season()
     print(f"Current season: {season}")
-
-    repo = g.get_repo(repo_name)
-    commits = 50  # Exemple fixe, remplacez par une fonction de récupération réelle
-
-    svg_content = generate_svg(season, commits)
-
-    # Écrire le fichier SVG dans la branche output
-    try:
-        repo.create_file(
-            path="output/generated-svg.svg",
-            message="Update SVG",
-            content=svg_content,
-            branch="output",
-        )
-        print("SVG file successfully created in the output branch.")
-    except Exception as e:
-        print(f"Error creating SVG file: {e}")
-
-    # Ajouter un lien vers le fichier SVG dans le README
-    try:
-        readme = repo.get_contents("README.md", ref="main")
-        updated_readme = readme.decoded_content.decode("utf-8")
-        svg_url = f"https://raw.githubusercontent.com/{repo_name}/output/generated-svg.svg"
-
-        if "<!-- SVG_LINK -->" in updated_readme:
-            updated_readme = updated_readme.replace(
-                "<!-- SVG_LINK -->",
-                f"[![SVG Contributions](https://raw.githubusercontent.com/{repo_name}/output/generated-svg.svg)]({svg_url})",
-            )
-            repo.update_file(
-                path=readme.path,
-                message="Update README with SVG link",
-                content=updated_readme,
-                sha=readme.sha,
-                branch="main",
-            )
-            print("README file successfully updated.")
-    except Exception as e:
-        print(f"Error updating README: {e}")
+    commits = get_commit_count(repo_name)
+    update_readme_with_svg(season, commits)
 
 if __name__ == "__main__":
     main()
