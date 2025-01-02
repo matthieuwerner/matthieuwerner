@@ -10,7 +10,7 @@ if not GITHUB_TOKEN:
 
 # Connectez-vous avec PyGithub
 g = Github(GITHUB_TOKEN)
-repo_name = "your-username/your-repo"  # Remplacez par votre dépôt
+repo_name = "matthieuwerner/matthieuwerner"  # Remplacez par votre dépôt
 
 # Détecter la saison actuelle
 def get_season():
