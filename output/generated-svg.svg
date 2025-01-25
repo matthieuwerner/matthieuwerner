@@ -1,0 +1,111 @@
+
+<svg xmlns="http://www.w3.org/2000/svg" width="700" height="400" style="background-color: black; font-family: Arial, sans-serif;">
+  <g fill="white" transform="translate(0, 0)">
+    <text x='20.0' y='20.0' text-anchor='middle' dominant-baseline='middle' font-size='20'>⬜</text>
+<text x='60.0' y='20.0' text-anchor='middle' dominant-baseline='middle' font-size='20'>⬜</text>
+<text x='100.0' y='20.0' text-anchor='middle' dominant-baseline='middle' font-size='20'>⬜</text>
+<text x='140.0' y='20.0' text-anchor='middle' dominant-baseline='middle' font-size='20'>⬜</text>
+<text x='180.0' y='20.0' text-anchor='middle' dominant-baseline='middle' font-size='20'>❄️</text>
+<text x='220.0' y='20.0' text-anchor='middle' dominant-baseline='middle' font-size='20'>❄️</text>
+<text x='260.0' y='20.0' text-anchor='middle' dominant-baseline='middle' font-size='20'>⬜</text>
+<text x='300.0' y='20.0' text-anchor='middle' dominant-baseline='middle' font-size='20'>⬜</text>
+<text x='340.0' y='20.0' text-anchor='middle' dominant-baseline='middle' font-size='20'>⬜</text>
+<text x='380.0' y='20.0' text-anchor='middle' dominant-baseline='middle' font-size='20'>⬜</text>
+<text x='20.0' y='60.0' text-anchor='middle' dominant-baseline='middle' font-size='20'>❄️</text>
+<text x='60.0' y='60.0' text-anchor='middle' dominant-baseline='middle' font-size='20'>⬜</text>
+<text x='100.0' y='60.0' text-anchor='middle' dominant-baseline='middle' font-size='20'>⬜</text>
+<text x='140.0' y='60.0' text-anchor='middle' dominant-baseline='middle' font-size='20'>❄️</text>
+<text x='180.0' y='60.0' text-anchor='middle' dominant-baseline='middle' font-size='20'>⬜</text>
+<text x='220.0' y='60.0' text-anchor='middle' dominant-baseline='middle' font-size='20'>⬜</text>
+<text x='260.0' y='60.0' text-anchor='middle' dominant-baseline='middle' font-size='20'>⬜</text>
+<text x='300.0' y='60.0' text-anchor='middle' dominant-baseline='middle' font-size='20'>⬜</text>
+<text x='340.0' y='60.0' text-anchor='middle' dominant-baseline='middle' font-size='20'>⬜</text>
+<text x='380.0' y='60.0' text-anchor='middle' dominant-baseline='middle' font-size='20'>⬜</text>
+<text x='20.0' y='100.0' text-anchor='middle' dominant-baseline='middle' font-size='20'>⬜</text>
+<text x='60.0' y='100.0' text-anchor='middle' dominant-baseline='middle' font-size='20'>⬜</text>
+<text x='100.0' y='100.0' text-anchor='middle' dominant-baseline='middle' font-size='20'>❄️</text>
+<text x='140.0' y='100.0' text-anchor='middle' dominant-baseline='middle' font-size='20'>⬜</text>
+<text x='180.0' y='100.0' text-anchor='middle' dominant-baseline='middle' font-size='20'>⬜</text>
+<text x='220.0' y='100.0' text-anchor='middle' dominant-baseline='middle' font-size='20'>⬜</text>
+<text x='260.0' y='100.0' text-anchor='middle' dominant-baseline='middle' font-size='20'>⬜</text>
+<text x='300.0' y='100.0' text-anchor='middle' dominant-baseline='middle' font-size='20'>⬜</text>
+<text x='340.0' y='100.0' text-anchor='middle' dominant-baseline='middle' font-size='20'>⬜</text>
+<text x='380.0' y='100.0' text-anchor='middle' dominant-baseline='middle' font-size='20'>⬜</text>
+<text x='20.0' y='140.0' text-anchor='middle' dominant-baseline='middle' font-size='20'>⬜</text>
+<text x='60.0' y='140.0' text-anchor='middle' dominant-baseline='middle' font-size='20'>⬜</text>
+<text x='100.0' y='140.0' text-anchor='middle' dominant-baseline='middle' font-size='20'>⬜</text>
+<text x='140.0' y='140.0' text-anchor='middle' dominant-baseline='middle' font-size='20'>⬜</text>
+<text x='180.0' y='140.0' text-anchor='middle' dominant-baseline='middle' font-size='20'>⬜</text>
+<text x='220.0' y='140.0' text-anchor='middle' dominant-baseline='middle' font-size='20'>⬜</text>
+<text x='260.0' y='140.0' text-anchor='middle' dominant-baseline='middle' font-size='20'>⬜</text>
+<text x='300.0' y='140.0' text-anchor='middle' dominant-baseline='middle' font-size='20'>⬜</text>
+<text x='340.0' y='140.0' text-anchor='middle' dominant-baseline='middle' font-size='20'>⬜</text>
+<text x='380.0' y='140.0' text-anchor='middle' dominant-baseline='middle' font-size='20'>⬜</text>
+<text x='20.0' y='180.0' text-anchor='middle' dominant-baseline='middle' font-size='20'>⬜</text>
+<text x='60.0' y='180.0' text-anchor='middle' dominant-baseline='middle' font-size='20'>⬜</text>
+<text x='100.0' y='180.0' text-anchor='middle' dominant-baseline='middle' font-size='20'>⬜</text>
+<text x='140.0' y='180.0' text-anchor='middle' dominant-baseline='middle' font-size='20'>⬜</text>
+<text x='180.0' y='180.0' text-anchor='middle' dominant-baseline='middle' font-size='20'>⬜</text>
+<text x='220.0' y='180.0' text-anchor='middle' dominant-baseline='middle' font-size='20'>⬜</text>
+<text x='260.0' y='180.0' text-anchor='middle' dominant-baseline='middle' font-size='20'>⬜</text>
+<text x='300.0' y='180.0' text-anchor='middle' dominant-baseline='middle' font-size='20'>⬜</text>
+<text x='340.0' y='180.0' text-anchor='middle' dominant-baseline='middle' font-size='20'>⬜</text>
+<text x='380.0' y='180.0' text-anchor='middle' dominant-baseline='middle' font-size='20'>⬜</text>
+<text x='20.0' y='220.0' text-anchor='middle' dominant-baseline='middle' font-size='20'>⬜</text>
+<text x='60.0' y='220.0' text-anchor='middle' dominant-baseline='middle' font-size='20'>❄️</text>
+<text x='100.0' y='220.0' text-anchor='middle' dominant-baseline='middle' font-size='20'>❄️</text>
+<text x='140.0' y='220.0' text-anchor='middle' dominant-baseline='middle' font-size='20'>⬜</text>
+<text x='180.0' y='220.0' text-anchor='middle' dominant-baseline='middle' font-size='20'>⬜</text>
+<text x='220.0' y='220.0' text-anchor='middle' dominant-baseline='middle' font-size='20'>❄️</text>
+<text x='260.0' y='220.0' text-anchor='middle' dominant-baseline='middle' font-size='20'>⬜</text>
+<text x='300.0' y='220.0' text-anchor='middle' dominant-baseline='middle' font-size='20'>⬜</text>
+<text x='340.0' y='220.0' text-anchor='middle' dominant-baseline='middle' font-size='20'>❄️</text>
+<text x='380.0' y='220.0' text-anchor='middle' dominant-baseline='middle' font-size='20'>❄️</text>
+<text x='20.0' y='260.0' text-anchor='middle' dominant-baseline='middle' font-size='20'>⬜</text>
+<text x='60.0' y='260.0' text-anchor='middle' dominant-baseline='middle' font-size='20'>⬜</text>
+<text x='100.0' y='260.0' text-anchor='middle' dominant-baseline='middle' font-size='20'>❄️</text>
+<text x='140.0' y='260.0' text-anchor='middle' dominant-baseline='middle' font-size='20'>⬜</text>
+<text x='180.0' y='260.0' text-anchor='middle' dominant-baseline='middle' font-size='20'>❄️</text>
+<text x='220.0' y='260.0' text-anchor='middle' dominant-baseline='middle' font-size='20'>⬜</text>
+<text x='260.0' y='260.0' text-anchor='middle' dominant-baseline='middle' font-size='20'>⬜</text>
+<text x='300.0' y='260.0' text-anchor='middle' dominant-baseline='middle' font-size='20'>⬜</text>
+<text x='340.0' y='260.0' text-anchor='middle' dominant-baseline='middle' font-size='20'>⬜</text>
+<text x='380.0' y='260.0' text-anchor='middle' dominant-baseline='middle' font-size='20'>⬜</text>
+<text x='20.0' y='300.0' text-anchor='middle' dominant-baseline='middle' font-size='20'>⬜</text>
+<text x='60.0' y='300.0' text-anchor='middle' dominant-baseline='middle' font-size='20'>⬜</text>
+<text x='100.0' y='300.0' text-anchor='middle' dominant-baseline='middle' font-size='20'>⬜</text>
+<text x='140.0' y='300.0' text-anchor='middle' dominant-baseline='middle' font-size='20'>⬜</text>
+<text x='180.0' y='300.0' text-anchor='middle' dominant-baseline='middle' font-size='20'>⬜</text>
+<text x='220.0' y='300.0' text-anchor='middle' dominant-baseline='middle' font-size='20'>⬜</text>
+<text x='260.0' y='300.0' text-anchor='middle' dominant-baseline='middle' font-size='20'>⬜</text>
+<text x='300.0' y='300.0' text-anchor='middle' dominant-baseline='middle' font-size='20'>❄️</text>
+<text x='340.0' y='300.0' text-anchor='middle' dominant-baseline='middle' font-size='20'>⬜</text>
+<text x='380.0' y='300.0' text-anchor='middle' dominant-baseline='middle' font-size='20'>⬜</text>
+<text x='20.0' y='340.0' text-anchor='middle' dominant-baseline='middle' font-size='20'>⬜</text>
+<text x='60.0' y='340.0' text-anchor='middle' dominant-baseline='middle' font-size='20'>⬜</text>
+<text x='100.0' y='340.0' text-anchor='middle' dominant-baseline='middle' font-size='20'>⬜</text>
+<text x='140.0' y='340.0' text-anchor='middle' dominant-baseline='middle' font-size='20'>⬜</text>
+<text x='180.0' y='340.0' text-anchor='middle' dominant-baseline='middle' font-size='20'>⬜</text>
+<text x='220.0' y='340.0' text-anchor='middle' dominant-baseline='middle' font-size='20'>⬜</text>
+<text x='260.0' y='340.0' text-anchor='middle' dominant-baseline='middle' font-size='20'>⬜</text>
+<text x='300.0' y='340.0' text-anchor='middle' dominant-baseline='middle' font-size='20'>⬜</text>
+<text x='340.0' y='340.0' text-anchor='middle' dominant-baseline='middle' font-size='20'>⬜</text>
+<text x='380.0' y='340.0' text-anchor='middle' dominant-baseline='middle' font-size='20'>⬜</text>
+<text x='20.0' y='380.0' text-anchor='middle' dominant-baseline='middle' font-size='20'>⬜</text>
+<text x='60.0' y='380.0' text-anchor='middle' dominant-baseline='middle' font-size='20'>⬜</text>
+<text x='100.0' y='380.0' text-anchor='middle' dominant-baseline='middle' font-size='20'>⬜</text>
+<text x='140.0' y='380.0' text-anchor='middle' dominant-baseline='middle' font-size='20'>❄️</text>
+<text x='180.0' y='380.0' text-anchor='middle' dominant-baseline='middle' font-size='20'>⬜</text>
+<text x='220.0' y='380.0' text-anchor='middle' dominant-baseline='middle' font-size='20'>❄️</text>
+<text x='260.0' y='380.0' text-anchor='middle' dominant-baseline='middle' font-size='20'>⬜</text>
+<text x='300.0' y='380.0' text-anchor='middle' dominant-baseline='middle' font-size='20'>⬜</text>
+<text x='340.0' y='380.0' text-anchor='middle' dominant-baseline='middle' font-size='20'>⬜</text>
+<text x='380.0' y='380.0' text-anchor='middle' dominant-baseline='middle' font-size='20'>❄️</text>
+  </g>
+  <g transform="translate(420, 20)" fill="white">
+    <text x="0" y="20" font-size="16" fill="white">Découverte du jour 🖼️</text>
+    <text x="0" y="50" font-size="14" fill="white"><tspan font-style="italic">Smith, Pitcher, Philadelphia Athletics, from the Old Judge series (N172) for Old Judge Cigarettes</tspan></text>
+    <text x="0" y="70" font-size="14" fill="white">Goodwin & Company, 1888</text>
+    <image x="0" y="90" width="200" height="200" href="https://images.metmuseum.org/CRDImages/dp/original/DP822576.jpg" />
+  </g>
+</svg>
