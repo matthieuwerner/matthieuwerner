@@ -18,7 +18,7 @@ declare(strict_types=1)
 class Matt {
     public function __construct (
       public $👨‍💼 = "I'm Matthieu",
-      public $🏢 = "I'm Working @Tiime", // https://www.tiime.fr/
+      public $🏢 = "I'm Working @treezor", // https://www.treezor.com/
       public $👀 = "I'm interested in approximately everything",
       public $🌱 = "I'm probably currently learning how can I automate useless stuff 🙈",
       public $🇫🇷 = "I'm french",
