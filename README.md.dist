@@ -13,21 +13,22 @@
 ```php
 <?php
 
-declare(strict_types=1)
+declare(strict_types=1);
 
 class Matt {
-    public function __construct (
-      public $👨‍💼 = "I'm Matthieu",
-      public $🏢 = "I'm Working @Tiime", // https://www.tiime.fr/
-      public $👀 = "I'm interested in approximately everything",
-      public $🌱 = "I'm probably currently learning how can I automate useless stuff 🙈",
-      public $🇫🇷 = "I'm french",
-      public $🐘 = "I <3 PHP",
-      public $📢 = "Speaker & former",
-      public $📫 = "Reach me on Linkedin",
-      public $📝 = "or read my blog at blog.matthieu-werner.fr",
-    ) {
-  }
+    public function __construct(
+        public string $👨‍💼 = "Matthieu Werner",
+        public string $🏢 = "Senior Software Engineer @Treezor",
+        public string $🎯 = "Card Payment Architecture & FinOps",
+        public string $📢 = "Speaker & Mentor @AFUP",
+        public string $🐘 = "PHP & Symfony enthusiast",
+        public string $🏗️ = "Building scalable and resilient systems",
+        public string $📫 = "Connect with me on LinkedIn"
+    ) {}
+
+    public function getLatestInsights(): string {
+        return "Check my blog at blog.matthieu-werner.fr";
+    }
 }
 ```
 
