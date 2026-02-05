@@ -1,162 +1,81 @@
 import datetime
 import os
 import random
+import re
 import requests
 from github import Github
 
-# Récupération du token GitHub
 GITHUB_TOKEN = os.getenv("GITHUB_TOKEN")
-if not GITHUB_TOKEN:
-    raise ValueError("GITHUB_TOKEN non défini. Vérifiez les secrets de votre workflow.")
-
-# Connectez-vous avec PyGithub
-g = Github(GITHUB_TOKEN)
 repo_name = "matthieuwerner/matthieuwerner"
+g = Github(GITHUB_TOKEN)
 
-# Détecter la saison actuelle
 def get_season():
-    today = datetime.date.today()
-    if today >= datetime.date(today.year, 3, 21) and today < datetime.date(today.year, 6, 21):
-        return "spring"
-    elif today >= datetime.date(today.year, 6, 21) and today < datetime.date(today.year, 9, 21):
-        return "summer"
-    elif today >= datetime.date(today.year, 9, 21) and today < datetime.date(today.year, 12, 21):
-        return "autumn"
-    else:
-        return "winter"
+    month = datetime.date.today().month
+    if 3 <= month <= 5: return "spring"
+    if 6 <= month <= 8: return "summer"
+    if 9 <= month <= 11: return "autumn"
+    return "winter"
 
-# Récupérer le nombre de commits récents
-def get_commit_count(repo_name, days=30):
-    try:
-        print(f"Fetching commits for repository: {repo_name}")
-        repo = g.get_repo(repo_name)
-        since = datetime.datetime.now() - datetime.timedelta(days=days)
-        commits = repo.get_commits(since=since)
-        print(f"Number of commits in the last {days} days: {commits.totalCount}")
-        return commits.totalCount
-    except Exception as e:
-        print(f"Erreur lors de la récupération des commits : {e}")
-        return 0
-
-# Récupérer une œuvre d'art du Met
 def fetch_random_met_artwork():
     api_base_url = "https://collectionapi.metmuseum.org/public/collection/v1"
-    response = requests.get(f"{api_base_url}/objects")
-    if response.status_code != 200:
-        raise Exception("Erreur lors de la récupération des œuvres du Met")
-    object_ids = response.json().get("objectIDs", [])
-    for _ in range(10):
-        random_id = random.choice(object_ids)
-        response = requests.get(f"{api_base_url}/objects/{random_id}")
-        if response.status_code != 200:
-            continue
-        artwork = response.json()
-        if artwork.get("primaryImage"):
-            return {
-                "title": artwork.get("title", "Œuvre inconnue"),
-                "image": artwork.get("primaryImage"),
-                "artist": artwork.get("artistDisplayName", "Artiste inconnu"),
-                "year": artwork.get("objectDate", "Date inconnue")
-            }
-    return {
-        "title": "Œuvre inconnue",
-        "image": "https://upload.wikimedia.org/wikipedia/commons/a/ac/No_image_available.svg",
-        "artist": "Artiste inconnu",
-        "year": "Date inconnue"
-    }
+    try:
+        r = requests.get(f"{api_base_url}/objects")
+        object_ids = r.json().get("objectIDs", [])
+        for _ in range(10):
+            obj_id = random.choice(object_ids)
+            artwork = requests.get(f"{api_base_url}/objects/{obj_id}").json()
+            if artwork.get("primaryImage"):
+                return {
+                    "title": artwork.get("title", "Unknown"),
+                    "image": artwork.get("primaryImage"),
+                    "artist": artwork.get("artistDisplayName", "Unknown Artist"),
+                    "year": artwork.get("objectDate", "n/a")
+                }
+    except: pass
+    return {"title": "Art Piece", "artist": "Unknown", "year": "n/a", "image": ""}
 
-# Générer le contenu SVG
-def generate_svg(season, commits):
-    themes = {
-        "spring": "🌸",
-        "summer": "🌞",
-        "autumn": "🍂",
-        "winter": "❄️"
-    }
+def generate_svg(season):
+    themes = {"spring": "🌸", "summer": "🌞", "autumn": "🍂", "winter": "❄️"}
     artwork = fetch_random_met_artwork()
-    grid_size = 10
-    cell_size = 40
-
     theme = themes[season]
-    density = min(commits // 5, grid_size * grid_size)
-    grid = ["⬜"] * (grid_size * grid_size)
-    positions = random.sample(range(grid_size * grid_size), density)
-    for pos in positions:
-        grid[pos] = theme
-
+    
+    # Grille 10x10 simplifiée
     grid_elements = []
-    for i in range(grid_size):
-        for j in range(grid_size):
-            content = grid[i * grid_size + j]
-            x = j * cell_size
-            y = i * cell_size
-            grid_elements.append(
-                f"<text x='{x + cell_size / 2}' y='{y + cell_size / 2}' text-anchor='middle' dominant-baseline='middle' font-size='20'>{content}</text>"
-            )
+    for i in range(10):
+        for j in range(10):
+            content = theme if random.random() > 0.8 else "⬜"
+            grid_elements.append(f"<text x='{j*40+20}' y='{i*40+20}' text-anchor='middle' dominant-baseline='middle' font-size='20'>{content}</text>")
 
-    grid_svg = "\n".join(grid_elements)
-    svg_width = grid_size * cell_size + 300
-    svg_height = grid_size * cell_size
-
-    svg_output = f"""
-<svg xmlns="http://www.w3.org/2000/svg" width="{svg_width}" height="{svg_height}" style="background-color: black; font-family: Arial, sans-serif;">
-  <g fill="white" transform="translate(0, 0)">
-    {grid_svg}
+    return f"""<svg xmlns="http://www.w3.org/2000/svg" width="700" height="400" style="background-color: black; font-family: Arial;">
+  <g fill="white">{"".join(grid_elements)}</g>
+  <g transform="translate(420, 20)" fill="white">
+    <text x="0" y="20" font-size="16">Daily Discovery 🖼️</text>
+    <text x="0" y="50" font-size="14" font-style="italic">{artwork['title']}</text>
+    <text x="0" y="70" font-size="12">{artwork['artist']}, {artwork['year']}</text>
+    <image x="0" y="90" width="250" height="250" href="{artwork['image']}" />
   </g>
-  <g transform="translate({grid_size * cell_size + 20}, 20)" fill="white">
-    <text x="0" y="20" font-size="16" fill="white">Découverte du jour 🖼️</text>
-    <text x="0" y="50" font-size="14" fill="white"><tspan font-style="italic">{artwork['title']}</tspan></text>
-    <text x="0" y="70" font-size="14" fill="white">{artwork['artist']}, {artwork['year']}</text>
-    <image x="0" y="90" width="200" height="200" href="{artwork['image']}" />
-  </g>
-</svg>
-"""
-    return svg_output
+</svg>"""
 
-# Mettre à jour le fichier README et créer le fichier SVG
-def update_readme_with_svg(season, commits):
-    repo = g.get_repo(repo_name)
-
-    # Générer le contenu SVG
-    svg_content = generate_svg(season, commits)
-    svg_path = "output/generated-svg.svg"
-
-    # Pousser le fichier SVG sur la branche output
-    try:
-        repo.create_file(
-            path=svg_path,
-            message="Update SVG",
-            content=svg_content,
-            branch="output",
-        )
-        print(f"SVG file pushed to branch 'output': {svg_path}")
-    except Exception as e:
-        print(f"Error pushing SVG file: {e}")
-
-    # Mise à jour du README
-    svg_url = f"https://raw.githubusercontent.com/{repo_name}/output/generated-svg.svg"
-    try:
-        with open("README.md.dist", "r") as file:
-            readme_content = file.read()
-
-        start_tag = "<!-- SVG_LINK -->"
-        if start_tag not in readme_content:
-            raise Exception(f"Balise {start_tag} introuvable dans README.md.dist.")
-        updated_readme = readme_content.replace(start_tag, f"![Generated SVG]({svg_url})")
-
-        with open("README.md", "w") as file:
-            file.write(updated_readme)
-        print("README.md mis à jour avec le lien SVG.")
-    except Exception as e:
-        print(f"Error updating README: {e}")
-
-# Script principal
 def main():
-    print("Script started...")
-    season = get_season()
-    print(f"Current season: {season}")
-    commits = get_commit_count(repo_name)
-    update_readme_with_svg(season, commits)
+    repo = g.get_repo(repo_name)
+    svg_content = generate_svg(get_season())
+    
+    # 1. Push SVG to output branch (via API for speed)
+    try:
+        contents = repo.get_contents("generated-svg.svg", ref="output")
+        repo.update_file(contents.path, "Update SVG", svg_content, contents.sha, branch="output")
+    except:
+        repo.create_file("generated-svg.svg", "Initial SVG", svg_content, branch="output")
+
+    # 2. Update README.md from .dist
+    with open("README.md.dist", "r") as f: content = f.read()
+    svg_url = f"https://raw.githubusercontent.com/{repo_name}/output/generated-svg.svg"
+    tag = ""
+    end_tag = ""
+    replacement = f"{tag}\n<p align='center'><img src='{svg_url}' alt='Daily Art'></p>\n{end_tag}"
+    new_readme = re.sub(f"{tag}.*?{end_tag}", replacement, content, flags=re.DOTALL)
+    
+    with open("README.md", "w") as f: f.write(new_readme)
 
 if __name__ == "__main__":
     main()
