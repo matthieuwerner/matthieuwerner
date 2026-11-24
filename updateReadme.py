@@ -56,7 +56,23 @@ def generate_svg(season):
   </g>
 </svg>"""
 
+def render_readme(template, svg_url):
+    start = "<!-- START_TABLE -->"
+    end = "<!-- END_TABLE -->"
+    if template.count(start) != 1 or template.count(end) != 1:
+        raise ValueError("README template must contain exactly one start and end marker")
+    left, rest = template.split(start, 1)
+    middle, right = rest.split(end, 1)
+    if end in left or start in right:
+        raise ValueError("README template markers are out of order")
+    replacement = f"{start}\n<p align='center'><img src='{svg_url}' alt='Daily Art'></p>\n{end}"
+    return left + replacement + right
+
 def main():
+    with open("README.md.dist", encoding="utf-8") as f:
+        template = f.read()
+    svg_url = f"https://raw.githubusercontent.com/{repo_name}/output/generated-svg.svg"
+    new_readme = render_readme(template, svg_url)
     repo = g.get_repo(repo_name)
     svg_content = generate_svg(get_season())
     
@@ -67,14 +83,6 @@ def main():
     except:
         repo.create_file("generated-svg.svg", "Initial SVG", svg_content, branch="output")
 
-    # 2. Update README.md from .dist
-    with open("README.md.dist", "r") as f: content = f.read()
-    svg_url = f"https://raw.githubusercontent.com/{repo_name}/output/generated-svg.svg"
-    tag = ""
-    end_tag = ""
-    replacement = f"{tag}\n<p align='center'><img src='{svg_url}' alt='Daily Art'></p>\n{end_tag}"
-    new_readme = re.sub(f"{tag}.*?{end_tag}", replacement, content, flags=re.DOTALL)
-    
     with open("README.md", "w") as f: f.write(new_readme)
 
 if __name__ == "__main__":
